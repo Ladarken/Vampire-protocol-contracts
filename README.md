@@ -1,5 +1,8 @@
 
 # Vampire-protocol
+
+## SOME THINGS ARE STILL A WIP!
+
 ## The Protocol
 VAMP is an experimental protocol building upon the most exciting innovations in programmable money and governance. Built by a team of DeFi natives, it seeks to create:
 
