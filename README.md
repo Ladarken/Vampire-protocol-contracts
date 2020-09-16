@@ -39,7 +39,7 @@ There are a requirements before rebases are active:
 •	`init_twap()`<br/>
 •	`activate_rebasing()`<br/>
 
-Rebasing will begin its activation phase after all of the farming pools will close. This begins with `init_twap()` on the rebaser contract. Anyone can call this at anytime once there is a VAMP/yCRV Uniswap V2 market. The oracle is designed to be 12 hours between checkpoints. Given that, 12 hours after `init_twap()` is called, anyone can call `activate_rebasing()`. This turns rebasing on, permanently. Now anyone can call `rebase()` when `inRebaseWindow() == true;`.
+Rebasing will begin its activation phase after all of the farming pools will close. This begins with `init_twap()` on the rebaser contract.  The oracle is designed to be 12 hours between checkpoints. Given that, 12 hours after `init_twap()` is called, anyone can call `activate_rebasing()`. This turns rebasing on, permanently. Now anyone can call `rebase()` when `inRebaseWindow() == true;`.
 
 In a rebase, the order of operations are:
 <br />
