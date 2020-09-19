@@ -28,7 +28,6 @@ const VAMPProxy = artifacts.require("VAMPDelegator");
 const VAMPReserves = artifacts.require("VAMPReserves");
 const VAMPRebaser = artifacts.require("VAMPRebaser");
 
-const Gov = artifacts.require("GovernorAlpha");
 const Timelock = artifacts.require("Timelock");
 
 // Deployed fourth.
@@ -55,12 +54,11 @@ async function deployDistribution(deployer, network, accounts) {
   let yReserves = await VAMPReserves.deployed()
   let yRebaser = await VAMPRebaser.deployed()
   let tl = await Timelock.deployed();
-  let gov = await Gov.deployed();
-  if (network != "test") {
+
+  if (network !== "test") {
     for (let i = 0; i < contractArtifacts.length; i++) {
       await deployer.deploy(contractArtifacts[i], VAMP.address);
     }
-
 
     let poolContracts = {}
     for (let i = 0; i < contractArtifacts.length; i++) {
@@ -129,7 +127,9 @@ async function deployDistribution(deployer, network, accounts) {
         0
       ),
   ]);
-  await tl.setPendingAdmin(Gov.address);
-  await gov.__acceptAdmin();
-  await gov.__abdicate();
+  // TODO - what will timelocks admin be?
+  // await tl.setPendingAdmin(Gov.address);
+
+  // await gov.__acceptAdmin();
+  // await gov.__abdicate();
 }
