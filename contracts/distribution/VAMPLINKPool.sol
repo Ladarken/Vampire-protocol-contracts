@@ -68,7 +68,7 @@ contract LPTokenWrapper {
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
 
-    IERC20 public link = IERC20(0x514910771AF9Ca656af840dff83E8264EcF986CA);
+    IERC20 public uni = IERC20(0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984);
 
     uint256 private _totalSupply;
     mapping(address => uint256) private _balances;
@@ -84,17 +84,17 @@ contract LPTokenWrapper {
     function stake(uint256 amount) public {
         _totalSupply = _totalSupply.add(amount);
         _balances[msg.sender] = _balances[msg.sender].add(amount);
-        link.safeTransferFrom(msg.sender, address(this), amount);
+        uni.safeTransferFrom(msg.sender, address(this), amount);
     }
 
     function withdraw(uint256 amount) public {
         _totalSupply = _totalSupply.sub(amount);
         _balances[msg.sender] = _balances[msg.sender].sub(amount);
-        link.safeTransfer(msg.sender, amount);
+        uni.safeTransfer(msg.sender, amount);
     }
 }
 
-contract VAMPLINKPOOL is LPTokenWrapper, IRewardDistributionRecipient {
+contract VAMPUNIPOOL is LPTokenWrapper, IRewardDistributionRecipient {
     IERC20 public vamp = IERC20(0x4De8f3F90b1bFBE535a979B94f0eE94132d7072D);
     uint256 public DURATION = 7 days;
     uint256 public generation = 3;
