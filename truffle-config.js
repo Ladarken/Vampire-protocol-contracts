@@ -22,7 +22,6 @@ module.exports = {
       network_id: '1001',
       gasPrice: 50000000000,
       gas: 8000000,
-      network_id: '1001',
     },
     distribution: {
       host: '0.0.0.0',
@@ -30,7 +29,6 @@ module.exports = {
       network_id: '1001',
       gasPrice: 50000000000,
       gas: 8000000,
-      network_id: '1001',
     },
     test_ci: {
       host: '0.0.0.0',

@@ -11,12 +11,8 @@ const VAMPProxy = artifacts.require("VAMPDelegator");
 const VAMPReserves = artifacts.require("VAMPReserves");
 const VAMPRebaser = artifacts.require("VAMPRebaser");
 
-// Governance
 // deployed third
-const Gov = artifacts.require("GovernorAlpha");
 const Timelock = artifacts.require("Timelock");
-
-
 
 // ============ Main Migration ============
 
@@ -37,8 +33,9 @@ module.exports = migration;
 
 async function deployGovernance(deployer, network) {
   await deployer.deploy(Timelock);
-  await deployer.deploy(Gov,
-      Timelock.address,
-      VAMPProxy.address
-  );
+  // TODO - what is the alternative here?
+  // await deployer.deploy(Gov,
+  //     Timelock.address,
+  //     VAMPProxy.address
+  // );
 }

@@ -1,9 +1,9 @@
 pragma solidity 0.5.17;
 
-/* import "./VAMPTokenInterface.sol"; */
-import "./VAMPGovernance.sol";
+import "./VAMPTokenInterface.sol";
+//import "./VAMPGovernance.sol";
 
-contract VAMPToken is VAMPGovernanceToken {
+contract VAMPToken is VAMPTokenInterface {
     // Modifiers
     modifier onlyGov() {
         require(msg.sender == gov);
@@ -31,7 +31,7 @@ contract VAMPToken is VAMPGovernanceToken {
         string memory symbol_,
         uint8 decimals_
     )
-        public
+    public
     {
         require(scalingFactor == 0, "already initialized");
         name = name_;
@@ -46,8 +46,8 @@ contract VAMPToken is VAMPGovernanceToken {
      * @param rebaser_ The address of the rebaser contract to use for authentication.
      */
     function _setRebaser(address rebaser_)
-        external
-        onlyGov
+    external
+    onlyGov
     {
         address oldRebaser = rebaser;
         rebaser = rebaser_;
@@ -58,8 +58,8 @@ contract VAMPToken is VAMPGovernanceToken {
      * @param incentivizer_ The address of the rebaser contract to use for authentication.
      */
     function _setIncentivizer(address incentivizer_)
-        external
-        onlyGov
+    external
+    onlyGov
     {
         address oldIncentivizer = incentivizer;
         incentivizer = incentivizer_;
@@ -70,8 +70,8 @@ contract VAMPToken is VAMPGovernanceToken {
      * @param pendingGov_ The address of the rebaser contract to use for authentication.
      */
     function _setPendingGov(address pendingGov_)
-        external
-        onlyGov
+    external
+    onlyGov
     {
         address oldPendingGov = pendingGov;
         pendingGov = pendingGov_;
@@ -82,7 +82,7 @@ contract VAMPToken is VAMPGovernanceToken {
      *
      */
     function _acceptGov()
-        external
+    external
     {
         require(msg.sender == pendingGov, "!pending");
         address oldGov = gov;
@@ -95,21 +95,21 @@ contract VAMPToken is VAMPGovernanceToken {
     * @notice Computes the current max scaling factor
     */
     function maxScalingFactor()
-        external
-        view
-        returns (uint256)
+    external
+    view
+    returns (uint256)
     {
         return _maxScalingFactor();
     }
 
     function _maxScalingFactor()
-        internal
-        view
-        returns (uint256)
+    internal
+    view
+    returns (uint256)
     {
         // scaling factor can only go up to 2**256-1 = initSupply * scalingFactor
         // this is used to check if scalingFactor will be too high to compute balances when rebasing.
-        return uint256(-1) / initSupply;
+        return uint256(- 1) / initSupply;
     }
 
     /**
@@ -117,9 +117,9 @@ contract VAMPToken is VAMPGovernanceToken {
     * @dev Limited to onlyMinter modifier
     */
     function mint(address to, uint256 amount)
-        external
-        onlyMinter
-        returns (bool)
+    external
+    onlyMinter
+    returns (bool)
     {
         _mint(to, amount);
         return true;
@@ -142,7 +142,9 @@ contract VAMPToken is VAMPGovernanceToken {
         _VAMPBalances[to] = _VAMPBalances[to].add(VAMPValue);
 
         // add delegates to the minter
-        _moveDelegates(address(0), _delegates[to], VAMPValue);
+        // TODO - Removing this will affect governance only
+        //_moveDelegates(address(0), _delegates[to], VAMPValue);
+
         emit Mint(to, amount);
     }
 
@@ -155,9 +157,9 @@ contract VAMPToken is VAMPGovernanceToken {
     * @return True on success, false otherwise.
     */
     function transfer(address to, uint256 value)
-        external
-        validRecipient(to)
-        returns (bool)
+    external
+    validRecipient(to)
+    returns (bool)
     {
         // underlying balance is stored in VAMPs, so divide by current scaling factor
 
@@ -174,7 +176,8 @@ contract VAMPToken is VAMPGovernanceToken {
         _VAMPBalances[to] = _VAMPBalances[to].add(VAMPValue);
         emit Transfer(msg.sender, to, value);
 
-        _moveDelegates(_delegates[msg.sender], _delegates[to], VAMPValue);
+        // TODO - Removing this will affect governance only
+        //_moveDelegates(_delegates[msg.sender], _delegates[to], VAMPValue);
         return true;
     }
 
@@ -185,9 +188,9 @@ contract VAMPToken is VAMPGovernanceToken {
     * @param value The amount of tokens to be transferred.
     */
     function transferFrom(address from, address to, uint256 value)
-        external
-        validRecipient(to)
-        returns (bool)
+    external
+    validRecipient(to)
+    returns (bool)
     {
         // decrease allowance
         _allowedFragments[from][msg.sender] = _allowedFragments[from][msg.sender].sub(value);
@@ -199,8 +202,8 @@ contract VAMPToken is VAMPGovernanceToken {
         _VAMPBalances[from] = _VAMPBalances[from].sub(VAMPValue);
         _VAMPBalances[to] = _VAMPBalances[to].add(VAMPValue);
         emit Transfer(from, to, value);
-
-        _moveDelegates(_delegates[from], _delegates[to], VAMPValue);
+        // TODO - Removing this will affect governance only
+        //  _moveDelegates(_delegates[from], _delegates[to], VAMPValue);
         return true;
     }
 
@@ -209,11 +212,11 @@ contract VAMPToken is VAMPGovernanceToken {
     * @return The balance of the specified address.
     */
     function balanceOf(address who)
-      external
-      view
-      returns (uint256)
+    external
+    view
+    returns (uint256)
     {
-      return _VAMPBalances[who].mul(scalingFactor).div(internalDecimals);
+        return _VAMPBalances[who].mul(scalingFactor).div(internalDecimals);
     }
 
     /** @notice Currently returns the internal storage amount
@@ -221,11 +224,11 @@ contract VAMPToken is VAMPGovernanceToken {
     * @return The underlying balance of the specified address.
     */
     function balanceOfUnderlying(address who)
-      external
-      view
-      returns (uint256)
+    external
+    view
+    returns (uint256)
     {
-      return _VAMPBalances[who];
+        return _VAMPBalances[who];
     }
 
     /**
@@ -235,9 +238,9 @@ contract VAMPToken is VAMPGovernanceToken {
      * @return The number of tokens still available for the spender.
      */
     function allowance(address owner_, address spender)
-        external
-        view
-        returns (uint256)
+    external
+    view
+    returns (uint256)
     {
         return _allowedFragments[owner_][spender];
     }
@@ -254,8 +257,8 @@ contract VAMPToken is VAMPGovernanceToken {
      * @param value The amount of tokens to be spent.
      */
     function approve(address spender, uint256 value)
-        external
-        returns (bool)
+    external
+    returns (bool)
     {
         _allowedFragments[msg.sender][spender] = value;
         emit Approval(msg.sender, spender, value);
@@ -270,8 +273,8 @@ contract VAMPToken is VAMPGovernanceToken {
      * @param addedValue The amount of tokens to increase the allowance by.
      */
     function increaseAllowance(address spender, uint256 addedValue)
-        external
-        returns (bool)
+    external
+    returns (bool)
     {
         _allowedFragments[msg.sender][spender] = _allowedFragments[msg.sender][spender].add(addedValue);
         emit Approval(msg.sender, spender, _allowedFragments[msg.sender][spender]);
@@ -285,8 +288,8 @@ contract VAMPToken is VAMPGovernanceToken {
      * @param subtractedValue The amount of tokens to decrease the allowance by.
      */
     function decreaseAllowance(address spender, uint256 subtractedValue)
-        external
-        returns (bool)
+    external
+    returns (bool)
     {
         uint256 oldValue = _allowedFragments[msg.sender][spender];
         if (subtractedValue >= oldValue) {
@@ -311,19 +314,19 @@ contract VAMPToken is VAMPGovernanceToken {
         uint256 indexDelta,
         bool positive
     )
-        external
-        onlyRebaser
-        returns (uint256)
+    external
+    onlyRebaser
+    returns (uint256)
     {
         if (indexDelta == 0) {
-          emit Rebase(epoch, scalingFactor, scalingFactor);
-          return totalSupply;
+            emit Rebase(epoch, scalingFactor, scalingFactor);
+            return totalSupply;
         }
 
         uint256 prevScalingFactor = scalingFactor;
 
         if (!positive) {
-           scalingFactor = scalingFactor.mul(BASE.sub(indexDelta)).div(BASE);
+            scalingFactor = scalingFactor.mul(BASE.sub(indexDelta)).div(BASE);
         } else {
             uint256 newScalingFactor = scalingFactor.mul(BASE.add(indexDelta)).div(BASE);
             if (newScalingFactor < _maxScalingFactor()) {
@@ -354,16 +357,16 @@ contract VAMP is VAMPToken {
         address initial_owner,
         uint256 initSupply_
     )
-        public
+    public
     {
         require(initSupply_ > 0, "0 init supply");
 
         super.initialize(name_, symbol_, decimals_);
 
-        initSupply = initSupply_.mul(10**24/ (BASE));
+        initSupply = initSupply_.mul(10 ** 24 / (BASE));
         totalSupply = initSupply_;
         scalingFactor = BASE;
-        _VAMPBalances[initial_owner] = initSupply_.mul(10**24 / (BASE));
+        _VAMPBalances[initial_owner] = initSupply_.mul(10 ** 24 / (BASE));
 
         // owner renounces ownership after deployment as they need to set
         // rebaser and incentivizer
