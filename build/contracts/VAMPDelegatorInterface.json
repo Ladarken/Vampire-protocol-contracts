@@ -61,7 +61,7 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"oldImplementation\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"newImplementation\",\"type\":\"address\"}],\"name\":\"NewImplementation\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"implementation_\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"allowResign\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"becomeImplementationData\",\"type\":\"bytes\"}],\"name\":\"_setImplementation\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"implementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"_setImplementation(address,bool,bytes)\":{\"params\":{\"allowResign\":\"Flag to indicate whether to call _resignImplementation on the old implementation\",\"becomeImplementationData\":\"The encoded bytes data to be passed to _becomeImplementation\",\"implementation_\":\"The address of the new implementation for delegation\"}}}},\"userdoc\":{\"methods\":{\"_setImplementation(address,bool,bytes)\":{\"notice\":\"Called by the gov to update the implementation of the delegator\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/token/VAMPDelegate.sol\":\"VAMPDelegatorInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/SafeMath.sol\":{\"keccak256\":\"0xfb72ae2642cad8f5da1644433dbcc12681f8064335dff144623f0514dc7922c6\",\"urls\":[\"bzz-raw://c174cb41d37d772336abf35cfef58015621ff96b834819531a65a67594aec5c4\",\"dweb:/ipfs/Qmdw3SxV2kaqdCoY4NBBXYcbX6baWbvGjJ6XP8jaH9pvyu\"]},\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/token/VAMP.sol\":{\"keccak256\":\"0x8ddec30225be6c960e7dbd9867b20e4c1135a12ccbf204fece48c5bca0166700\",\"urls\":[\"bzz-raw://c4c94a227df17c5ee2dc62f2a4dd6fc01436d81ca91997e45c6ed43919b2a399\",\"dweb:/ipfs/QmdjPLmzcxPLWRcPtSFYQwCT8hbXwqJujDFJJ4nj51sTg2\"]},\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/token/VAMPDelegate.sol\":{\"keccak256\":\"0x91c974560bdd28dc79d6c0b0a999409ebd12911bfe06b1c807de6885cf99d31f\",\"urls\":[\"bzz-raw://b36042b0dfe35ad3cdd905bb37ef7965849964372a8642c4aac83ad53240cee6\",\"dweb:/ipfs/QmfM8WdVFFQBVTkdqy2oLVGTHYoNDJSMYzuwYKq37ctdPA\"]},\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/token/VAMPGovernanceStorage.sol\":{\"keccak256\":\"0x7e0302245721b504d25c30bc49951a9dbe890d3e648f9ca873981be055ae4383\",\"urls\":[\"bzz-raw://af816fa26abcdb3939f95d6c37546d0d6edc36f893592000de252b057b193f57\",\"dweb:/ipfs/QmY7HmCXxuHSKPUASCwTYgNKyWD963saBAguW4i9cvGEYg\"]},\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/token/VAMPTokenInterface.sol\":{\"keccak256\":\"0xef671c5d8b6a57d709362ef249cb1cfd37e3739f89bcbd0f79ae34e6b68d2344\",\"urls\":[\"bzz-raw://7c7e15e51e67596f8645ddde19ff783920cf05a9c96eb33f54488680f700b2c8\",\"dweb:/ipfs/QmYafEspG7km58WjqiahnfBdXDsFGMTvqx7cY6YijtQLRe\"]},\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/token/VAMPTokenStorage.sol\":{\"keccak256\":\"0xb73484151496b3bafe0a9b7e61c66aabf26eda87eb7cdfbfaf3b2970562126a2\",\"urls\":[\"bzz-raw://50d7a4e8dcd5b49c97cd594bb8e51f79d38603ae85b0e73a73d98c364b8771b3\",\"dweb:/ipfs/Qme7gDVLczGfT9xTt3BF6Trtz1vuKVKmGYqkor13Eg44Vo\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"oldImplementation\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"newImplementation\",\"type\":\"address\"}],\"name\":\"NewImplementation\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"implementation_\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"allowResign\",\"type\":\"bool\"},{\"internalType\":\"bytes\",\"name\":\"becomeImplementationData\",\"type\":\"bytes\"}],\"name\":\"_setImplementation\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"implementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"_setImplementation(address,bool,bytes)\":{\"params\":{\"allowResign\":\"Flag to indicate whether to call _resignImplementation on the old implementation\",\"becomeImplementationData\":\"The encoded bytes data to be passed to _becomeImplementation\",\"implementation_\":\"The address of the new implementation for delegation\"}}}},\"userdoc\":{\"methods\":{\"_setImplementation(address,bool,bytes)\":{\"notice\":\"Called by the gov to update the implementation of the delegator\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/token/VAMPDelegate.sol\":\"VAMPDelegatorInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/SafeMath.sol\":{\"keccak256\":\"0xfb72ae2642cad8f5da1644433dbcc12681f8064335dff144623f0514dc7922c6\",\"urls\":[\"bzz-raw://c174cb41d37d772336abf35cfef58015621ff96b834819531a65a67594aec5c4\",\"dweb:/ipfs/Qmdw3SxV2kaqdCoY4NBBXYcbX6baWbvGjJ6XP8jaH9pvyu\"]},\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/token/VAMP.sol\":{\"keccak256\":\"0xcd1cef7608d59914d176da51f012886c101c66127d180fa4ead27b0b2b2893d1\",\"urls\":[\"bzz-raw://919afff9687e355cde5ece06676cec7f22839a9dcbc9db1e33a2ef1612730b18\",\"dweb:/ipfs/QmZvY4MBkqE7hzLdsj5mbFe8JFTxjNsXTe6whpfNKHkvYP\"]},\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/token/VAMPDelegate.sol\":{\"keccak256\":\"0x91c974560bdd28dc79d6c0b0a999409ebd12911bfe06b1c807de6885cf99d31f\",\"urls\":[\"bzz-raw://b36042b0dfe35ad3cdd905bb37ef7965849964372a8642c4aac83ad53240cee6\",\"dweb:/ipfs/QmfM8WdVFFQBVTkdqy2oLVGTHYoNDJSMYzuwYKq37ctdPA\"]},\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/token/VAMPTokenInterface.sol\":{\"keccak256\":\"0x661f6725af57d25440975b97fb58bc3810c72a923da103d94c91966b98b34430\",\"urls\":[\"bzz-raw://7c4e5c5f29464c4a11b7a32804751a5a04624df8b277afb1b9e797e5ad8c2cb1\",\"dweb:/ipfs/QmdPSEbFxzUq3sVGpWmJ35JXwXU6vJYUcxKDhUEonpLCwe\"]},\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/token/VAMPTokenStorage.sol\":{\"keccak256\":\"0xb73484151496b3bafe0a9b7e61c66aabf26eda87eb7cdfbfaf3b2970562126a2\",\"urls\":[\"bzz-raw://50d7a4e8dcd5b49c97cd594bb8e51f79d38603ae85b0e73a73d98c364b8771b3\",\"dweb:/ipfs/Qme7gDVLczGfT9xTt3BF6Trtz1vuKVKmGYqkor13Eg44Vo\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
@@ -533,13 +533,12 @@
           8922,
           8928,
           8957,
-          9569,
-          9788,
-          9837
+          9705,
+          9754
         ],
         "contractKind": "contract",
         "documentation": null,
-        "fullyImplemented": false,
+        "fullyImplemented": true,
         "id": 9012,
         "linearizedBaseContracts": [
           9012,
@@ -547,9 +546,8 @@
           8928,
           8922,
           8856,
-          9788,
-          9569,
-          9837
+          9705,
+          9754
         ],
         "name": "VAMPDelegate",
         "nodeType": "ContractDefinition",
@@ -753,7 +751,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9852,
+                            "referencedDeclaration": 9769,
                             "src": "1993:3:24",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -782,7 +780,7 @@
                           "name": "gov",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9804,
+                          "referencedDeclaration": 9721,
                           "src": "2007:3:24",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -829,10 +827,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9855,
-                        9856
+                        9772,
+                        9773
                       ],
-                      "referencedDeclaration": 9856,
+                      "referencedDeclaration": 9773,
                       "src": "1985:7:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1060,7 +1058,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9852,
+                            "referencedDeclaration": 9769,
                             "src": "2366:3:24",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1089,7 +1087,7 @@
                           "name": "gov",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9804,
+                          "referencedDeclaration": 9721,
                           "src": "2380:3:24",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -1136,10 +1134,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9855,
-                        9856
+                        9772,
+                        9773
                       ],
-                      "referencedDeclaration": 9856,
+                      "referencedDeclaration": 9773,
                       "src": "2358:7:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1663,13 +1661,12 @@
           8922,
           8928,
           8957,
-          9569,
-          9788,
-          9837
+          9705,
+          9754
         ],
         "contractKind": "contract",
         "documentation": null,
-        "fullyImplemented": false,
+        "fullyImplemented": true,
         "id": 9012,
         "linearizedBaseContracts": [
           9012,
@@ -1677,9 +1674,8 @@
           8928,
           8922,
           8856,
-          9788,
-          9569,
-          9837
+          9705,
+          9754
         ],
         "name": "VAMPDelegate",
         "nodeType": "ContractDefinition",
@@ -1883,7 +1879,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9852,
+                            "referencedDeclaration": 9769,
                             "src": "1993:3:24",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1912,7 +1908,7 @@
                           "name": "gov",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9804,
+                          "referencedDeclaration": 9721,
                           "src": "2007:3:24",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -1959,10 +1955,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9855,
-                        9856
+                        9772,
+                        9773
                       ],
-                      "referencedDeclaration": 9856,
+                      "referencedDeclaration": 9773,
                       "src": "1985:7:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2190,7 +2186,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9852,
+                            "referencedDeclaration": 9769,
                             "src": "2366:3:24",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -2219,7 +2215,7 @@
                           "name": "gov",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9804,
+                          "referencedDeclaration": 9721,
                           "src": "2380:3:24",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -2266,10 +2262,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9855,
-                        9856
+                        9772,
+                        9773
                       ],
-                      "referencedDeclaration": 9856,
+                      "referencedDeclaration": 9773,
                       "src": "2358:7:24",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2334,7 +2330,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-09-19T22:34:18.740Z",
+  "updatedAt": "2020-09-21T09:34:55.970Z",
   "devdoc": {
     "methods": {
       "_setImplementation(address,bool,bytes)": {

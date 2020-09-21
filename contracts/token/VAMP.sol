@@ -1,7 +1,6 @@
 pragma solidity 0.5.17;
 
 import "./VAMPTokenInterface.sol";
-//import "./VAMPGovernance.sol";
 
 contract VAMPToken is VAMPTokenInterface {
     // Modifiers
@@ -141,10 +140,6 @@ contract VAMPToken is VAMPTokenInterface {
         // add balance
         _VAMPBalances[to] = _VAMPBalances[to].add(VAMPValue);
 
-        // add delegates to the minter
-        // TODO - Removing this will affect governance only
-        //_moveDelegates(address(0), _delegates[to], VAMPValue);
-
         emit Mint(to, amount);
     }
 
@@ -176,8 +171,6 @@ contract VAMPToken is VAMPTokenInterface {
         _VAMPBalances[to] = _VAMPBalances[to].add(VAMPValue);
         emit Transfer(msg.sender, to, value);
 
-        // TODO - Removing this will affect governance only
-        //_moveDelegates(_delegates[msg.sender], _delegates[to], VAMPValue);
         return true;
     }
 
@@ -202,8 +195,6 @@ contract VAMPToken is VAMPTokenInterface {
         _VAMPBalances[from] = _VAMPBalances[from].sub(VAMPValue);
         _VAMPBalances[to] = _VAMPBalances[to].add(VAMPValue);
         emit Transfer(from, to, value);
-        // TODO - Removing this will affect governance only
-        //  _moveDelegates(_delegates[from], _delegates[to], VAMPValue);
         return true;
     }
 
