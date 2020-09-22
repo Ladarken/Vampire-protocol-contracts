@@ -635,8 +635,9 @@ contract VotesPlatformTokenPreSale is Ownable {
     }
 
     function claimTokens() public claimEnabled() {
-        require(sold[msg.sender] > 0)
+        require(sold[msg.sender] > 0,"no more tokens to claim");
         VAMP.safeTransfer(msg.sender, sold[msg.sender]);
+        sold[msg.sender] = 0;
     }
 
    /* function withdraw() onlyOwner {
@@ -656,7 +657,7 @@ contract VotesPlatformTokenPreSale is Ownable {
     {
         assert(crowdsaleFinished == false);
 
-        require(usdtRaised.add(amount) <= hardCap);
+        require(usdtRaised.add(amount) <= hardCap,"cant deposit without triggering hardcap");
         if (block.timestamp <= startTime.add(stageOne)) {
             //first 2 hours
             uint256 tokens = amount * tokensPerUSDT;
