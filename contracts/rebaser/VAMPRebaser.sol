@@ -356,7 +356,7 @@ contract VAMPRebaser {
     function activate_rebasing()
         public
     {
-        require(timeOfTWAPInit > 0, "twap wasnt intitiated, call init_twap()");
+        require(timeOfTWAPInit > 0, "twap wasn't initiated, call init_twap()");
         // cannot enable prior to end of rebaseDelay
         require(now >= timeOfTWAPInit + rebaseDelay, "!end_delay");
 
