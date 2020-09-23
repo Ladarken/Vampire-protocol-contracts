@@ -555,9 +555,9 @@ contract VotesPlatformTokenPreSale is Ownable {
     uint256 public hardCap;
     uint256 public softCap;
     uint256 public tokensPerUSDT;
-    uint256 public purchaseLimitStageOne = 400 * 1e6;
+    uint256 public purchaseLimitStageOne = 600 * 1e6;
     uint256 public purchaseLimitStageTwo = 2000 * 1e6;
-    uint256 public purchaseLimitStageThree = 8000 * 1e6;
+    uint256 public purchaseLimitStageThree = 10000 * 1e6;
 
     uint256 public tokensSold = 0;
     uint256 public usdtRaised = 0;
@@ -607,7 +607,6 @@ contract VotesPlatformTokenPreSale is Ownable {
        // address[] memory whitelistAddresses // presale duration in hours
     ) public {
         hardCap = 550000 * 1e6;
-        softCap = 250000 * 1e6;
         tokensPerUSDT = _totalTokens / hardCap;
         startTime = _startTime;
         endTime = _startTime + 48 hours;
@@ -649,22 +648,25 @@ contract VotesPlatformTokenPreSale is Ownable {
         
     
 
-    function withdrawTokens() public onlyOwner onlyAfter(endTime) {
+    function withdrawTokens() public onlyOwner onlyAfter(timeHardCapReached) {
         VAMP.safeTransfer(collector, VAMP.balanceOf(address(this)));
     }
 
     function claimTokens() public claimEnabled() {
-        require(sold[msg.sender] > 0,"no more tokens to claim");
+        if(isWhitelisted(msg.sender)){
+            if(whitelistAmount[msg.sender] > 0) {
+            VAMP.safeTransfer(msg.sender, whitelistAmount[msg.sender]);
+            whitelistAmount[msg.sender] = 0;
+            } 
+            }  
+        }
+        if(sold[msg.sender] > 0){
         VAMP.safeTransfer(msg.sender, sold[msg.sender]);
         sold[msg.sender] = 0;
+        }
+       
     }
 
-   /* function withdraw() onlyOwner {
-        require(softCapReached);
-        beneficiary.safeTransfer(usdtRaised);
-        token.transfer(beneficiary, token.balanceOf(this));
-        crowdsaleFinished = true;
-    }*/
 
     function purchase(uint256 amount) public {
       doPurchase(amount);
@@ -680,14 +682,6 @@ contract VotesPlatformTokenPreSale is Ownable {
         if (block.timestamp <= startTime.add(stageOne) && isWhitelisted(msg.sender)) {
             //first 2 hours
             uint256 tokens = amount * tokensPerUSDT;
-            if (
-                !softCapReached &&
-                usdtRaised < softCap &&
-                usdtRaised.add(amount) >= softCap
-            ) {
-                softCapReached = true;
-                emit SoftCapReached(softCap);
-            }
             require(
                 amount <= purchaseLimitStageOne,
                 "Over purchase limit in stage one"
@@ -705,40 +699,9 @@ contract VotesPlatformTokenPreSale is Ownable {
             sold[msg.sender] += tokens;
             tokensSold = tokensSold.add(tokens);
         } else if (
-            block.timestamp >= startTime.add(stageOne) &&
-            block.timestamp <= startTime.add(stageTwo) && isWhitelisted(msg.sender)
+            block.timestamp >= startTime.add(stageOne)
         ) {
-            //first 2 - 4 hours
-
-            uint256 tokens = amount * tokensPerUSDT;
-            if (
-                !softCapReached &&
-                usdtRaised < softCap &&
-                usdtRaised.add(amount) >= softCap
-            ) {
-                softCapReached = true;
-                emit SoftCapReached(softCap);
-            }
-            require(
-                amount <= purchaseLimitStageTwo,
-                "Over purchase limit in stage one"
-            );
-            require(
-                whitelistAmount[msg.sender].add(amount) <=
-                    purchaseLimitStageTwo + purchaseLimitStageOne,
-                "can't purchase more than allowed amount stage two"
-            );
-
-            usdt.safeTransferFrom(msg.sender, collector, amount);
-            whitelistAmount[msg.sender] = whitelistAmount[msg.sender].add(
-                amount
-            );
-            usdtRaised = usdtRaised.add(amount);
-            VAMP.safeTransfer(msg.sender,tokens);
-            sold[msg.sender] += tokens;
-            tokensSold = tokensSold.add(tokens);
-        } else if (block.timestamp > startTime.add(stageTwo)) {
-            //4 - 48 hours
+            //after 2 hours
              require(
                 amount <= purchaseLimitStageThree,
                 "Over purchase limit in stage three"
@@ -749,15 +712,6 @@ contract VotesPlatformTokenPreSale is Ownable {
                 "can't purchase more than allowed amount stage three"
             );
             uint256 tokens = amount * tokensPerUSDT;
-          
-            if (
-                !softCapReached &&
-                usdtRaised < softCap &&
-                usdtRaised.add(amount) >= softCap
-            ) {
-                softCapReached = true;
-                emit SoftCapReached(softCap);
-            }
             usdt.safeTransferFrom(msg.sender, collector, amount);
             usdtRaised = usdtRaised.add(amount);
             VAMP.safeTransfer(msg.sender,tokens);
