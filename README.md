@@ -1,7 +1,7 @@
 
 # Vampire-protocol
 
-## SOME THINGS ARE STILL A WIP!
+## Rebaser and Summoner farming pool are still under development, the rest is done. For any bugs or queries https://t.me/bytefang
 
 ## The Protocol
 VAMP is an experimental protocol building upon the most exciting innovations in programmable money and governance. Built by a team of DeFi natives, it seeks to create:
