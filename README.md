@@ -10,7 +10,7 @@ VAMP is an experimental protocol building upon the most exciting innovations in 
 
 At its core, VAMP is an elastic supply cryptocurrency, which expands and contracts its supply in response to market conditions, initially targeting 1 USD per VAMP. This stability mechanism includes one key addition to existing elastic supply models such as Ampleforth
 
-We have built VAMP to be a minimally viable monetary experiment, and at launch there will be 70% of VAMP tokens. After deployment the remaining 30% of VAMP tokens will be farmed.
+We have built VAMP to be a minimally viable monetary experiment, and at launch there will be 63.64% of VAMP tokens. After deployment the remaining 36.36% of VAMP tokens will be farmed.
 
 ## Audits
 
