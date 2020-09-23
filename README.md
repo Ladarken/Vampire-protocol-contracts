@@ -27,7 +27,7 @@ If you feel uncomfortable with these disclosures, don't stake or hold VAMP. If t
 
 ## Distribution
 
-The initial distribution of VAMP will be evenly distributed across five farming pools: Uniswap LP (ETH/VAMP), WBTC, WETH, USDT, LINK. These pools were chosen intentionally to reach a broad swath of the overall DeFi community, as well as specific communities with a proven commitment to active governance and an understanding of complex tokenomics.
+The initial distribution of VAMP will be evenly distributed across five farming pools: Uniswap LP (ETH/VAMP), WBTC, WETH, USDT, UNI. These pools were chosen intentionally to reach a broad swath of the overall DeFi community, as well as specific communities with a proven commitment to active governance and an understanding of complex tokenomics.
 
 Following the launch of the initial distribution pools, a second distribution pool called Summoner to farm vMANA with VAMP will launch for 7 days. After that a final pool to farm VAMP with vMANA_uniswap (vMANA/eth) LP tokens will launch.
 
