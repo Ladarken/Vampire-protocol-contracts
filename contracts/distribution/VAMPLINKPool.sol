@@ -184,7 +184,7 @@ contract VAMPUNIPOOL is LPTokenWrapper, IRewardDistributionRecipient {
             DURATION = 6 days;
             genReward = totalsup.mul(16).div(100);
             initreward = genReward.mul(17).div(100);
-            vamp.mint(address(this), initreward);
+            //vamp.mint(address(this), initreward);
             rewardRate = initreward.div(DURATION);
             periodFinish = block.timestamp.add(DURATION);
             emit RewardAdded(initreward);
@@ -192,7 +192,7 @@ contract VAMPUNIPOOL is LPTokenWrapper, IRewardDistributionRecipient {
             DURATION = 5 days;
             genReward = totalsup.mul(21).div(100);
             initreward = genReward.mul(17).div(100);
-            vamp.mint(address(this), initreward);
+           // vamp.mint(address(this), initreward);
             rewardRate = initreward.div(DURATION);
             periodFinish = block.timestamp.add(DURATION);
             emit RewardAdded(initreward);
@@ -200,7 +200,7 @@ contract VAMPUNIPOOL is LPTokenWrapper, IRewardDistributionRecipient {
             DURATION = 3 days;
             genReward = totalsup.mul(27).div(100);
             initreward = genReward.mul(17).div(100);
-            vamp.mint(address(this), initreward);
+           // vamp.mint(address(this), initreward);
             rewardRate = initreward.div(DURATION);
             periodFinish = block.timestamp.add(DURATION);
             emit RewardAdded(initreward);
@@ -231,7 +231,7 @@ contract VAMPUNIPOOL is LPTokenWrapper, IRewardDistributionRecipient {
             uint256 leftover = remaining.mul(rewardRate);
             rewardRate = initreward.add(leftover).div(DURATION);
         }
-        vamp.mint(address(this),initreward);
+       // vamp.mint(address(this),initreward);
         lastUpdateTime = block.timestamp;
         periodFinish = block.timestamp.add(DURATION);
         emit RewardAdded(initreward);

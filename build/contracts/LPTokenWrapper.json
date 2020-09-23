@@ -83,15 +83,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"stake\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"weth\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/distribution/VAMPWETHPool.sol\":\"LPTokenWrapper\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/distribution/VAMPWETHPool.sol\":{\"keccak256\":\"0x18088f16792a7ec58ac02fbcab955d398bdb0019e91a9957235e5bb326b581fe\",\"urls\":[\"bzz-raw://2e62dc09d0467eacf35cb44bc7fe25daa2b544f9bfd8baa7da3c27cafdb23a74\",\"dweb:/ipfs/QmcT2oC1UrR6fTzQWtZE89tDLWEfYsWQ5tgSaJfRyZUiYo\"]},\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/Address.sol\":{\"keccak256\":\"0xfcf985fe775d3891eb6f1df2b0926b13392f7411550fbddbb2a51e2dfb4c328f\",\"urls\":[\"bzz-raw://557db9c06dce45db040c1a8a87cc2100cbaa86b3fd7cbdf49acf983e110673df\",\"dweb:/ipfs/QmVRxJhBro2YT42FkofepMfseF4rxbDFNXySA2doFSf2Lq\"]},\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/Context.sol\":{\"keccak256\":\"0x931290799f25ef7475027c8ccde0dc81dc12a273aae498fd4219d0b40abf5aa2\",\"urls\":[\"bzz-raw://44397b3b927d361c5ec007ab118d3aec0325b3e1cb9a3d9db3e6312c6262cc0c\",\"dweb:/ipfs/QmYpN3NPFRAcPvZYQpxsmerCHM9GpZniGL5gUH5xvAJsWm\"]},\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/IERC20.sol\":{\"keccak256\":\"0x2716c5243cfceded2e1670ac0e86c0935d941b0773f678250babd3a38b109dba\",\"urls\":[\"bzz-raw://efa559ff31bb85c58f7c0602819c436c08af6c34e76d3aa608450a10c6f6c918\",\"dweb:/ipfs/QmdV6uiX2Ue2ZTsewvmZbkLuPN5kJMMdxPu6K8fsFGxVsG\"]},\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/IRewardDistributionRecipient.sol\":{\"keccak256\":\"0xb4df29861dc9305b28793155887754f683cb5fa190bfaad5a6654c5b5f51622b\",\"urls\":[\"bzz-raw://a97c7d3b2970717ecdbeaef970ac905cd5e849d6a33483ff8cf1a431f63cd5be\",\"dweb:/ipfs/QmUMmShRp2zFfqijVm6yAwAtrAJG9p1iNKtAu6DwaQCx2w\"]},\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/Math.sol\":{\"keccak256\":\"0x8250fb28d14e362975585ff99b26b7bc8d040d6a96919fea3bea90c26f2bc78c\",\"urls\":[\"bzz-raw://91beaf0b376276c1630178430de97fb0eefd5f606a9ed2362f14d93e31c602ac\",\"dweb:/ipfs/QmY3eaykj79nYff3qTkSJKrZZBwhMnYmPQ9KBEgeiTbH5k\"]},\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/Ownable.sol\":{\"keccak256\":\"0xb9ff2f22f40d668195df8bffe6c1db55b17bff128c2927b2f9958a522107c2e6\",\"urls\":[\"bzz-raw://9aa8820f92e475587380293d3284123f2cfe09ecff04d901be022a90277ff7f3\",\"dweb:/ipfs/QmYXfNdFdFAgkPaNG64vvhEufpi2qTyYtcBL1rSLTQnTyn\"]},\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/SafeERC20.sol\":{\"keccak256\":\"0x00c7887d6e2af7d5971473efbd93d312374d6e8478a6f435d7ec3b62fe62a523\",\"urls\":[\"bzz-raw://787539dc1ebb71a219dee830f1d71188d0b13c2d5f7e7bfd08a3cafa8ec9333c\",\"dweb:/ipfs/QmfFwH2Wt17vqVaeoCMpdXbRUFa3e2Kbm1i6HTybGFXv8h\"]},\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/SafeMath.sol\":{\"keccak256\":\"0xfb72ae2642cad8f5da1644433dbcc12681f8064335dff144623f0514dc7922c6\",\"urls\":[\"bzz-raw://c174cb41d37d772336abf35cfef58015621ff96b834819531a65a67594aec5c4\",\"dweb:/ipfs/Qmdw3SxV2kaqdCoY4NBBXYcbX6baWbvGjJ6XP8jaH9pvyu\"]}},\"version\":1}",
-  "bytecode": "0x6080604052600080546001600160a01b031916732260fac5e5542a773aa44fbcfedf7c193bc2c59917905534801561003657600080fd5b5061067d806100466000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c806318160ddd1461005c5780632e1a7d4d146100765780633fc8cef31461009557806370a08231146100b9578063a694fc3a146100df575b600080fd5b6100646100fc565b60408051918252519081900360200190f35b6100936004803603602081101561008c57600080fd5b5035610102565b005b61009d610166565b604080516001600160a01b039092168252519081900360200190f35b610064600480360360208110156100cf57600080fd5b50356001600160a01b0316610175565b610093600480360360208110156100f557600080fd5b5035610190565b60015490565b600154610115908263ffffffff6101f216565b60015533600090815260026020526040902054610138908263ffffffff6101f216565b336000818152600260205260408120929092559054610163916001600160a01b03909116908361023b565b50565b6000546001600160a01b031681565b6001600160a01b031660009081526002602052604090205490565b6001546101a3908263ffffffff61029216565b600155336000908152600260205260409020546101c6908263ffffffff61029216565b336000818152600260205260408120929092559054610163916001600160a01b039091169030846102ec565b600061023483836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f77000081525061034c565b9392505050565b604080516001600160a01b038416602482015260448082018490528251808303909101815260649091019091526020810180516001600160e01b031663a9059cbb60e01b17905261028d9084906103e3565b505050565b600082820183811015610234576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b604080516001600160a01b0385811660248301528416604482015260648082018490528251808303909101815260849091019091526020810180516001600160e01b03166323b872dd60e01b1790526103469085906103e3565b50505050565b600081848411156103db5760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b838110156103a0578181015183820152602001610388565b50505050905090810190601f1680156103cd5780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b505050900390565b6060610438826040518060400160405280602081526020017f5361666545524332303a206c6f772d6c6576656c2063616c6c206661696c6564815250856001600160a01b03166104949092919063ffffffff16565b80519091501561028d5780806020019051602081101561045757600080fd5b505161028d5760405162461bcd60e51b815260040180806020018281038252602a81526020018061061f602a913960400191505060405180910390fd5b60606104a384846000856104ab565b949350505050565b60606104b685610618565b610507576040805162461bcd60e51b815260206004820152601d60248201527f416464726573733a2063616c6c20746f206e6f6e2d636f6e7472616374000000604482015290519081900360640190fd5b60006060866001600160a01b031685876040518082805190602001908083835b602083106105465780518252601f199092019160209182019101610527565b6001836020036101000a03801982511681845116808217855250505050505090500191505060006040518083038185875af1925050503d80600081146105a8576040519150601f19603f3d011682016040523d82523d6000602084013e6105ad565b606091505b509150915081156105c15791506104a39050565b8051156105d15780518082602001fd5b60405162461bcd60e51b81526020600482018181528651602484015286518793919283926044019190850190808383600083156103a0578181015183820152602001610388565b3b15159056fe5361666545524332303a204552433230206f7065726174696f6e20646964206e6f742073756363656564a265627a7a7231582097f611778be6ba8cf2f9d0c576079bdadd87233f4a45e4d87b2adcf8216e5cfa64736f6c63430005110032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c806318160ddd1461005c5780632e1a7d4d146100765780633fc8cef31461009557806370a08231146100b9578063a694fc3a146100df575b600080fd5b6100646100fc565b60408051918252519081900360200190f35b6100936004803603602081101561008c57600080fd5b5035610102565b005b61009d610166565b604080516001600160a01b039092168252519081900360200190f35b610064600480360360208110156100cf57600080fd5b50356001600160a01b0316610175565b610093600480360360208110156100f557600080fd5b5035610190565b60015490565b600154610115908263ffffffff6101f216565b60015533600090815260026020526040902054610138908263ffffffff6101f216565b336000818152600260205260408120929092559054610163916001600160a01b03909116908361023b565b50565b6000546001600160a01b031681565b6001600160a01b031660009081526002602052604090205490565b6001546101a3908263ffffffff61029216565b600155336000908152600260205260409020546101c6908263ffffffff61029216565b336000818152600260205260408120929092559054610163916001600160a01b039091169030846102ec565b600061023483836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f77000081525061034c565b9392505050565b604080516001600160a01b038416602482015260448082018490528251808303909101815260649091019091526020810180516001600160e01b031663a9059cbb60e01b17905261028d9084906103e3565b505050565b600082820183811015610234576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b604080516001600160a01b0385811660248301528416604482015260648082018490528251808303909101815260849091019091526020810180516001600160e01b03166323b872dd60e01b1790526103469085906103e3565b50505050565b600081848411156103db5760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b838110156103a0578181015183820152602001610388565b50505050905090810190601f1680156103cd5780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b505050900390565b6060610438826040518060400160405280602081526020017f5361666545524332303a206c6f772d6c6576656c2063616c6c206661696c6564815250856001600160a01b03166104949092919063ffffffff16565b80519091501561028d5780806020019051602081101561045757600080fd5b505161028d5760405162461bcd60e51b815260040180806020018281038252602a81526020018061061f602a913960400191505060405180910390fd5b60606104a384846000856104ab565b949350505050565b60606104b685610618565b610507576040805162461bcd60e51b815260206004820152601d60248201527f416464726573733a2063616c6c20746f206e6f6e2d636f6e7472616374000000604482015290519081900360640190fd5b60006060866001600160a01b031685876040518082805190602001908083835b602083106105465780518252601f199092019160209182019101610527565b6001836020036101000a03801982511681845116808217855250505050505090500191505060006040518083038185875af1925050503d80600081146105a8576040519150601f19603f3d011682016040523d82523d6000602084013e6105ad565b606091505b509150915081156105c15791506104a39050565b8051156105d15780518082602001fd5b60405162461bcd60e51b81526020600482018181528651602484015286518793919283926044019190850190808383600083156103a0578181015183820152602001610388565b3b15159056fe5361666545524332303a204552433230206f7065726174696f6e20646964206e6f742073756363656564a265627a7a7231582097f611778be6ba8cf2f9d0c576079bdadd87233f4a45e4d87b2adcf8216e5cfa64736f6c63430005110032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"stake\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"weth\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/distribution/VAMPWETHPool.sol\":\"LPTokenWrapper\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/distribution/VAMPWETHPool.sol\":{\"keccak256\":\"0x18088f16792a7ec58ac02fbcab955d398bdb0019e91a9957235e5bb326b581fe\",\"urls\":[\"bzz-raw://2e62dc09d0467eacf35cb44bc7fe25daa2b544f9bfd8baa7da3c27cafdb23a74\",\"dweb:/ipfs/QmcT2oC1UrR6fTzQWtZE89tDLWEfYsWQ5tgSaJfRyZUiYo\"]},\"/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/Address.sol\":{\"keccak256\":\"0xfcf985fe775d3891eb6f1df2b0926b13392f7411550fbddbb2a51e2dfb4c328f\",\"urls\":[\"bzz-raw://557db9c06dce45db040c1a8a87cc2100cbaa86b3fd7cbdf49acf983e110673df\",\"dweb:/ipfs/QmVRxJhBro2YT42FkofepMfseF4rxbDFNXySA2doFSf2Lq\"]},\"/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/Context.sol\":{\"keccak256\":\"0x931290799f25ef7475027c8ccde0dc81dc12a273aae498fd4219d0b40abf5aa2\",\"urls\":[\"bzz-raw://44397b3b927d361c5ec007ab118d3aec0325b3e1cb9a3d9db3e6312c6262cc0c\",\"dweb:/ipfs/QmYpN3NPFRAcPvZYQpxsmerCHM9GpZniGL5gUH5xvAJsWm\"]},\"/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/IERC20.sol\":{\"keccak256\":\"0x2716c5243cfceded2e1670ac0e86c0935d941b0773f678250babd3a38b109dba\",\"urls\":[\"bzz-raw://efa559ff31bb85c58f7c0602819c436c08af6c34e76d3aa608450a10c6f6c918\",\"dweb:/ipfs/QmdV6uiX2Ue2ZTsewvmZbkLuPN5kJMMdxPu6K8fsFGxVsG\"]},\"/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/IRewardDistributionRecipient.sol\":{\"keccak256\":\"0xb4df29861dc9305b28793155887754f683cb5fa190bfaad5a6654c5b5f51622b\",\"urls\":[\"bzz-raw://a97c7d3b2970717ecdbeaef970ac905cd5e849d6a33483ff8cf1a431f63cd5be\",\"dweb:/ipfs/QmUMmShRp2zFfqijVm6yAwAtrAJG9p1iNKtAu6DwaQCx2w\"]},\"/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/Math.sol\":{\"keccak256\":\"0x8250fb28d14e362975585ff99b26b7bc8d040d6a96919fea3bea90c26f2bc78c\",\"urls\":[\"bzz-raw://91beaf0b376276c1630178430de97fb0eefd5f606a9ed2362f14d93e31c602ac\",\"dweb:/ipfs/QmY3eaykj79nYff3qTkSJKrZZBwhMnYmPQ9KBEgeiTbH5k\"]},\"/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/Ownable.sol\":{\"keccak256\":\"0xb9ff2f22f40d668195df8bffe6c1db55b17bff128c2927b2f9958a522107c2e6\",\"urls\":[\"bzz-raw://9aa8820f92e475587380293d3284123f2cfe09ecff04d901be022a90277ff7f3\",\"dweb:/ipfs/QmYXfNdFdFAgkPaNG64vvhEufpi2qTyYtcBL1rSLTQnTyn\"]},\"/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/SafeERC20.sol\":{\"keccak256\":\"0x00c7887d6e2af7d5971473efbd93d312374d6e8478a6f435d7ec3b62fe62a523\",\"urls\":[\"bzz-raw://787539dc1ebb71a219dee830f1d71188d0b13c2d5f7e7bfd08a3cafa8ec9333c\",\"dweb:/ipfs/QmfFwH2Wt17vqVaeoCMpdXbRUFa3e2Kbm1i6HTybGFXv8h\"]},\"/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/SafeMath.sol\":{\"keccak256\":\"0xfb72ae2642cad8f5da1644433dbcc12681f8064335dff144623f0514dc7922c6\",\"urls\":[\"bzz-raw://c174cb41d37d772336abf35cfef58015621ff96b834819531a65a67594aec5c4\",\"dweb:/ipfs/Qmdw3SxV2kaqdCoY4NBBXYcbX6baWbvGjJ6XP8jaH9pvyu\"]}},\"version\":1}",
+  "bytecode": "0x6080604052600080546001600160a01b031916732260fac5e5542a773aa44fbcfedf7c193bc2c59917905534801561003657600080fd5b5061067d806100466000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c806318160ddd1461005c5780632e1a7d4d146100765780633fc8cef31461009557806370a08231146100b9578063a694fc3a146100df575b600080fd5b6100646100fc565b60408051918252519081900360200190f35b6100936004803603602081101561008c57600080fd5b5035610102565b005b61009d610166565b604080516001600160a01b039092168252519081900360200190f35b610064600480360360208110156100cf57600080fd5b50356001600160a01b0316610175565b610093600480360360208110156100f557600080fd5b5035610190565b60015490565b600154610115908263ffffffff6101f216565b60015533600090815260026020526040902054610138908263ffffffff6101f216565b336000818152600260205260408120929092559054610163916001600160a01b03909116908361023b565b50565b6000546001600160a01b031681565b6001600160a01b031660009081526002602052604090205490565b6001546101a3908263ffffffff61029216565b600155336000908152600260205260409020546101c6908263ffffffff61029216565b336000818152600260205260408120929092559054610163916001600160a01b039091169030846102ec565b600061023483836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f77000081525061034c565b9392505050565b604080516001600160a01b038416602482015260448082018490528251808303909101815260649091019091526020810180516001600160e01b031663a9059cbb60e01b17905261028d9084906103e3565b505050565b600082820183811015610234576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b604080516001600160a01b0385811660248301528416604482015260648082018490528251808303909101815260849091019091526020810180516001600160e01b03166323b872dd60e01b1790526103469085906103e3565b50505050565b600081848411156103db5760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b838110156103a0578181015183820152602001610388565b50505050905090810190601f1680156103cd5780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b505050900390565b6060610438826040518060400160405280602081526020017f5361666545524332303a206c6f772d6c6576656c2063616c6c206661696c6564815250856001600160a01b03166104949092919063ffffffff16565b80519091501561028d5780806020019051602081101561045757600080fd5b505161028d5760405162461bcd60e51b815260040180806020018281038252602a81526020018061061f602a913960400191505060405180910390fd5b60606104a384846000856104ab565b949350505050565b60606104b685610618565b610507576040805162461bcd60e51b815260206004820152601d60248201527f416464726573733a2063616c6c20746f206e6f6e2d636f6e7472616374000000604482015290519081900360640190fd5b60006060866001600160a01b031685876040518082805190602001908083835b602083106105465780518252601f199092019160209182019101610527565b6001836020036101000a03801982511681845116808217855250505050505090500191505060006040518083038185875af1925050503d80600081146105a8576040519150601f19603f3d011682016040523d82523d6000602084013e6105ad565b606091505b509150915081156105c15791506104a39050565b8051156105d15780518082602001fd5b60405162461bcd60e51b81526020600482018181528651602484015286518793919283926044019190850190808383600083156103a0578181015183820152602001610388565b3b15159056fe5361666545524332303a204552433230206f7065726174696f6e20646964206e6f742073756363656564a265627a7a723158200f3080861aefe45f0b34c717d5024ae6e623819e9c2541dc8444c64d9b6db6ae64736f6c63430005110032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c806318160ddd1461005c5780632e1a7d4d146100765780633fc8cef31461009557806370a08231146100b9578063a694fc3a146100df575b600080fd5b6100646100fc565b60408051918252519081900360200190f35b6100936004803603602081101561008c57600080fd5b5035610102565b005b61009d610166565b604080516001600160a01b039092168252519081900360200190f35b610064600480360360208110156100cf57600080fd5b50356001600160a01b0316610175565b610093600480360360208110156100f557600080fd5b5035610190565b60015490565b600154610115908263ffffffff6101f216565b60015533600090815260026020526040902054610138908263ffffffff6101f216565b336000818152600260205260408120929092559054610163916001600160a01b03909116908361023b565b50565b6000546001600160a01b031681565b6001600160a01b031660009081526002602052604090205490565b6001546101a3908263ffffffff61029216565b600155336000908152600260205260409020546101c6908263ffffffff61029216565b336000818152600260205260408120929092559054610163916001600160a01b039091169030846102ec565b600061023483836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f77000081525061034c565b9392505050565b604080516001600160a01b038416602482015260448082018490528251808303909101815260649091019091526020810180516001600160e01b031663a9059cbb60e01b17905261028d9084906103e3565b505050565b600082820183811015610234576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b604080516001600160a01b0385811660248301528416604482015260648082018490528251808303909101815260849091019091526020810180516001600160e01b03166323b872dd60e01b1790526103469085906103e3565b50505050565b600081848411156103db5760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b838110156103a0578181015183820152602001610388565b50505050905090810190601f1680156103cd5780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b505050900390565b6060610438826040518060400160405280602081526020017f5361666545524332303a206c6f772d6c6576656c2063616c6c206661696c6564815250856001600160a01b03166104949092919063ffffffff16565b80519091501561028d5780806020019051602081101561045757600080fd5b505161028d5760405162461bcd60e51b815260040180806020018281038252602a81526020018061061f602a913960400191505060405180910390fd5b60606104a384846000856104ab565b949350505050565b60606104b685610618565b610507576040805162461bcd60e51b815260206004820152601d60248201527f416464726573733a2063616c6c20746f206e6f6e2d636f6e7472616374000000604482015290519081900360640190fd5b60006060866001600160a01b031685876040518082805190602001908083835b602083106105465780518252601f199092019160209182019101610527565b6001836020036101000a03801982511681845116808217855250505050505090500191505060006040518083038185875af1925050503d80600081146105a8576040519150601f19603f3d011682016040523d82523d6000602084013e6105ad565b606091505b509150915081156105c15791506104a39050565b8051156105d15780518082602001fd5b60405162461bcd60e51b81526020600482018181528651602484015286518793919283926044019190850190808383600083156103a0578181015183820152602001610388565b3b15159056fe5361666545524332303a204552433230206f7065726174696f6e20646964206e6f742073756363656564a265627a7a723158200f3080861aefe45f0b34c717d5024ae6e623819e9c2541dc8444c64d9b6db6ae64736f6c63430005110032",
   "sourceMap": "3147:914:4:-;;;3242:71;;;-1:-1:-1;;;;;;3242:71:4;3270:42;3242:71;;;3147:914;5:2:-1;;;;30:1;27;20:12;5:2;3147:914:4;;;;;;;",
   "deployedSourceMap": "3147:914:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;3147:914:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3406:89;;;:::i;:::-;;;;;;;;;;;;;;;;3848:211;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;3848:211:4;;:::i;:::-;;3242:71;;;:::i;:::-;;;;-1:-1:-1;;;;;3242:71:4;;;;;;;;;;;;;;3501:108;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;3501:108:4;-1:-1:-1;;;;;3501:108:4;;:::i;3615:227::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;3615:227:4;;:::i;3406:89::-;3476:12;;3406:89;:::o;3848:211::-;3914:12;;:24;;3931:6;3914:24;:16;:24;:::i;:::-;3899:12;:39;3982:10;3972:21;;;;:9;:21;;;;;;:33;;3998:6;3972:33;:25;:33;:::i;:::-;3958:10;3948:21;;;;:9;:21;;;;;:57;;;;4015:4;;:37;;-1:-1:-1;;;;;4015:4:4;;;;4045:6;4015:17;:37::i;:::-;3848:211;:::o;3242:71::-;;;-1:-1:-1;;;;;3242:71:4;;:::o;3501:108::-;-1:-1:-1;;;;;3584:18:4;3558:7;3584:18;;;:9;:18;;;;;;;3501:108::o;3615:227::-;3678:12;;:24;;3695:6;3678:24;:16;:24;:::i;:::-;3663:12;:39;3746:10;3736:21;;;;:9;:21;;;;;;:33;;3762:6;3736:33;:25;:33;:::i;:::-;3722:10;3712:21;;;;:9;:21;;;;;:57;;;;3779:4;;:56;;-1:-1:-1;;;;;3779:4:4;;;;3821;3828:6;3779:21;:56::i;1322:134:18:-;1380:7;1406:43;1410:1;1413;1406:43;;;;;;;;;;;;;;;;;:3;:43::i;:::-;1399:50;1322:134;-1:-1:-1;;;1322:134:18:o;678:175:17:-;787:58;;;-1:-1:-1;;;;;787:58:17;;;;;;;;;;;;;;;26:21:-1;;;22:32;;;6:49;;787:58:17;;;;;;;;25:18:-1;;61:17;;-1:-1;;;;;182:15;-1:-1;;;179:29;160:49;;760:86:17;;780:5;;760:19;:86::i;:::-;678:175;;;:::o;875:176:18:-;933:7;964:5;;;987:6;;;;979:46;;;;;-1:-1:-1;;;979:46:18;;;;;;;;;;;;;;;;;;;;;;;;;;;859:203:17;986:68;;;-1:-1:-1;;;;;986:68:17;;;;;;;;;;;;;;;;;;;;;;26:21:-1;;;22:32;;;6:49;;986:68:17;;;;;;;;25:18:-1;;61:17;;-1:-1;;;;;182:15;-1:-1;;;179:29;160:49;;959:96:17;;979:5;;959:19;:96::i;:::-;859:203;;;;:::o;1747:187:18:-;1833:7;1868:12;1860:6;;;;1852:29;;;;-1:-1:-1;;;1852:29:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;1852:29:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1903:5:18;;;1747:187::o;2941:751:17:-;3360:23;3386:69;3414:4;3386:69;;;;;;;;;;;;;;;;;3394:5;-1:-1:-1;;;;;3386:27:17;;;:69;;;;;:::i;:::-;3469:17;;3360:95;;-1:-1:-1;3469:21:17;3465:221;;3609:10;3598:30;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;3598:30:17;3590:85;;;;-1:-1:-1;;;3590:85:17;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3571:194:8;3674:12;3705:53;3728:6;3736:4;3742:1;3745:12;3705:22;:53::i;:::-;3698:60;3571:194;-1:-1:-1;;;;3571:194:8:o;4918:955::-;5048:12;5080:18;5091:6;5080:10;:18::i;:::-;5072:60;;;;;-1:-1:-1;;;5072:60:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;5203:12;5217:23;5244:6;-1:-1:-1;;;;;5244:11:8;5262:8;5272:4;5244:33;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;36:153;;176:10;;164:23;;-1:-1;;139:12;;;;98:2;89:12;;;;114;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;5244:33:8;;;;;;;;;;;;;;;;;;;;;;;;;14:1:-1;21;16:31;;;;75:4;69:11;64:16;;144:4;140:9;133:4;115:16;111:27;107:43;104:1;100:51;94:4;87:65;169:16;166:1;159:27;225:16;222:1;215:4;212:1;208:12;193:49;7:242;;16:31;36:4;31:9;;7:242;;5202:75:8;;;;5291:7;5287:580;;;5321:10;-1:-1:-1;5314:17:8;;-1:-1:-1;5314:17:8;5287:580;5432:17;;:21;5428:429;;5690:10;5684:17;5750:15;5737:10;5733:2;5729:19;5722:44;5639:145;5822:20;;-1:-1:-1;;;5822:20:8;;;;;;;;;;;;;;;;;5829:12;;5822:20;;;;;;;;;;;;;;;27:10:-1;;8:100;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;719:413:8;1079:20;1117:8;;;719:413::o",
   "source": "/*\n\n                                                                                                      \n      _____         ____        _____        ______  _______    ____  _____   ______         _____    \n ____|\\    \\   ____|\\   \\   ___|\\    \\      |      \\/       \\  |    ||\\    \\ |\\     \\    ___|\\    \\   \n|    | \\    \\ /    /\\    \\ |    |\\    \\    /          /\\     \\ |    | \\\\    \\| \\     \\  /    /\\    \\  \n|    |______/|    |  |    ||    | |    |  /     /\\   / /\\     ||    |  \\|    \\  \\     ||    |  |____| \n|    |----'\\ |    |__|    ||    |/____/  /     /\\ \\_/ / /    /||    |   |     \\  |    ||    |    ____ \n|    |_____/ |    .--.    ||    |\\    \\ |     |  \\|_|/ /    / ||    |   |      \\ |    ||    |   |    |\n|    |       |    |  |    ||    | |    ||     |       |    |  ||    |   |    |\\ \\|    ||    |   |_,  |\n|____|       |____|  |____||____| |____||\\____\\       |____|  /|____|   |____||\\_____/||\\ ___\\___/  /|\n|    |       |    |  |    ||    | |    || |    |      |    | / |    |   |    |/ \\|   ||| |   /____ / |\n|____|       |____|  |____||____| |____| \\|____|      |____|/  |____|   |____|   |___|/ \\|___|    | / \n  )/           \\(      )/    \\(     )/      \\(          )/       \\(       \\(       )/     \\( |____|/  \n  '             '      '      '     '        '          '         '        '       '       '   )/     \n                                                                                               '      \n\n   ____            __   __        __   _\n  / __/__ __ ___  / /_ / /  ___  / /_ (_)__ __\n _\\ \\ / // // _ \\/ __// _ \\/ -_)/ __// / \\ \\ /\n/___/ \\_, //_//_/\\__//_//_/\\__/ \\__//_/ /_\\_\\\n     /___/\n\n* Synthetix: VAMPRewards.sol\n*\n* Docs: https://docs.synthetix.io/\n*\n*\n* MIT License\n* ===========\n*\n* Copyright (c) 2020 Synthetix\n*\n* Permission is hereby granted, free of charge, to any person obtaining a copy\n* of this software and associated documentation files (the \"Software\"), to deal\n* in the Software without restriction, including without limitation the rights\n* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n* copies of the Software, and to permit persons to whom the Software is\n* furnished to do so, subject to the following conditions:\n*\n* The above copyright notice and this permission notice shall be included in all\n* copies or substantial portions of the Software.\n*\n* THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n*/\npragma solidity ^0.5.17;\n\nimport \"../lib/Ownable.sol\";\nimport \"../lib/Math.sol\";\nimport \"../lib/IERC20.sol\";\nimport \"../lib/SafeMath.sol\";\nimport \"../lib/Address.sol\";\nimport \"../lib/SafeERC20.sol\";\nimport \"../lib/IRewardDistributionRecipient.sol\";\n\ninterface VAMP {\n    function scalingFactor() external returns (uint256);\n}\n\n\ncontract LPTokenWrapper {\n    using SafeMath for uint256;\n    using SafeERC20 for IERC20;\n\n    IERC20 public weth = IERC20(0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599);\n\n    uint256 private _totalSupply;\n    mapping(address => uint256) private _balances;\n\n    function totalSupply() public view returns (uint256) {\n        return _totalSupply;\n    }\n\n    function balanceOf(address account) public view returns (uint256) {\n        return _balances[account];\n    }\n\n    function stake(uint256 amount) public {\n        _totalSupply = _totalSupply.add(amount);\n        _balances[msg.sender] = _balances[msg.sender].add(amount);\n        weth.safeTransferFrom(msg.sender, address(this), amount);\n    }\n\n    function withdraw(uint256 amount) public {\n        _totalSupply = _totalSupply.sub(amount);\n        _balances[msg.sender] = _balances[msg.sender].sub(amount);\n        weth.safeTransfer(msg.sender, amount);\n    }\n}\n\ncontract VAMPWETHPOOL is LPTokenWrapper, IRewardDistributionRecipient {\n   IERC20 public vamp = IERC20(0x4De8f3F90b1bFBE535a979B94f0eE94132d7072D);\n    uint256 public DURATION = 7 days;\n    uint256 public generation = 3;\n    uint256 public totalsup = vamp.totalSupply().mul(30).div(100); //change\n    uint256 public genReward = totalsup.mul(11).div(100);\n    uint256 public initreward = genReward.mul(17).div(100);\n    uint256 public starttime = 1598707259;\n    uint256 public periodFinish = 0;\n    uint256 public rewardRate = 0;\n    uint256 public lastUpdateTime;\n    uint256 public rewardPerTokenStored;\n    mapping(address => uint256) public userRewardPerTokenPaid;\n    mapping(address => uint256) public rewards;\n\n    event RewardAdded(uint256 reward);\n    event Staked(address indexed user, uint256 amount);\n    event Withdrawn(address indexed user, uint256 amount);\n    event RewardPaid(address indexed user, uint256 reward);\n\n    modifier updateReward(address account) {\n        rewardPerTokenStored = rewardPerToken();\n        lastUpdateTime = lastTimeRewardApplicable();\n        if (account != address(0)) {\n            rewards[account] = earned(account);\n            userRewardPerTokenPaid[account] = rewardPerTokenStored;\n        }\n        _;\n    }\n\n    function lastTimeRewardApplicable() public view returns (uint256) {\n        return Math.min(block.timestamp, periodFinish);\n    }\n\n    function rewardPerToken() public view returns (uint256) {\n        if (totalSupply() == 0) {\n            return rewardPerTokenStored;\n        }\n        return\n            rewardPerTokenStored.add(\n                lastTimeRewardApplicable()\n                    .sub(lastUpdateTime)\n                    .mul(rewardRate)\n                    .mul(1e18)\n                    .div(totalSupply())\n            );\n    }\n\n    function earned(address account) public view returns (uint256) {\n        return\n            balanceOf(account)\n                .mul(rewardPerToken().sub(userRewardPerTokenPaid[account]))\n                .div(1e18)\n                .add(rewards[account]);\n    }\n\n    // stake visibility is public as overriding LPTokenWrapper's stake() function\n    function stake(uint256 amount) public updateReward(msg.sender) checkhalve checkStart{\n        require(amount > 0, \"Cannot stake 0\");\n        super.stake(amount);\n        emit Staked(msg.sender, amount);\n    }\n\n    function withdraw(uint256 amount) public updateReward(msg.sender) checkStart{\n        require(amount > 0, \"Cannot withdraw 0\");\n        super.withdraw(amount);\n        emit Withdrawn(msg.sender, amount);\n    }\n\n    function exit() external {\n        withdraw(balanceOf(msg.sender));\n        getReward();\n    }\n\n    function getReward() public updateReward(msg.sender) checkhalve checkStart{\n        uint256 reward = earned(msg.sender);\n        if (reward > 0) {\n            rewards[msg.sender] = 0;\n            vamp.safeTransfer(msg.sender, reward);\n            emit RewardPaid(msg.sender, reward);\n        }\n    }\n\n     modifier checkhalve() {\n    if (block.timestamp >= periodFinish) {\n        generation = generation.add(1);\n        if (generation == 4) {\n            DURATION = 6 days;\n            genReward = totalsup.mul(16).div(100);\n            initreward = genReward.mul(17).div(100);\n            vamp.mint(address(this), initreward);\n            rewardRate = initreward.div(DURATION);\n            periodFinish = block.timestamp.add(DURATION);\n            emit RewardAdded(initreward);\n        } else if (generation == 5) {\n            DURATION = 5 days;\n            genReward = totalsup.mul(21).div(100);\n            initreward = genReward.mul(17).div(100);\n            vamp.mint(address(this), initreward);\n            rewardRate = initreward.div(DURATION);\n            periodFinish = block.timestamp.add(DURATION);\n            emit RewardAdded(initreward);\n        } else if (generation == 6) {\n            DURATION = 3 days;\n            genReward = totalsup.mul(27).div(100);\n            initreward = genReward.mul(17).div(100);\n            vamp.mint(address(this), initreward);\n            rewardRate = initreward.div(DURATION);\n            periodFinish = block.timestamp.add(DURATION);\n            emit RewardAdded(initreward);\n        } else if (generation > 6) {\n            uint256 balance = vamp.balanceOf(address(this));\n            require(balance > 0, \"Contract is empty, all rewards distributed\");\n            vamp.safeTransfer(owner(), balance); //transfer any leftover rewards to the owner to be burned or airdropped.\n        }\n\n    }\n    _;\n}\n    \n    modifier checkStart(){\n        require(block.timestamp > starttime,\"not start\");\n        _;\n    }\n\n    function notifyRewardAmount()\n        external\n        onlyRewardDistribution\n        updateReward(address(0))\n    {\n        if (block.timestamp >= periodFinish) {\n            rewardRate = initreward.div(DURATION);\n        } else {\n            uint256 remaining = periodFinish.sub(block.timestamp);\n            uint256 leftover = remaining.mul(rewardRate);\n            rewardRate = initreward.add(leftover).div(DURATION);\n        }\n        vamp.mint(address(this),initreward);\n        lastUpdateTime = block.timestamp;\n        periodFinish = block.timestamp.add(DURATION);\n        emit RewardAdded(initreward);\n    }\n}",
-  "sourcePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/distribution/VAMPWETHPool.sol",
+  "sourcePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/distribution/VAMPWETHPool.sol",
   "ast": {
-    "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/distribution/VAMPWETHPool.sol",
+    "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/distribution/VAMPWETHPool.sol",
     "exportedSymbols": {
       "LPTokenWrapper": [
         2417
@@ -118,7 +118,7 @@
         "src": "2819:24:4"
       },
       {
-        "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/Ownable.sol",
+        "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/Ownable.sol",
         "file": "../lib/Ownable.sol",
         "id": 2296,
         "nodeType": "ImportDirective",
@@ -129,7 +129,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/Math.sol",
+        "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/Math.sol",
         "file": "../lib/Math.sol",
         "id": 2297,
         "nodeType": "ImportDirective",
@@ -140,7 +140,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/IERC20.sol",
+        "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/IERC20.sol",
         "file": "../lib/IERC20.sol",
         "id": 2298,
         "nodeType": "ImportDirective",
@@ -151,7 +151,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/SafeMath.sol",
+        "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/SafeMath.sol",
         "file": "../lib/SafeMath.sol",
         "id": 2299,
         "nodeType": "ImportDirective",
@@ -162,7 +162,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/Address.sol",
+        "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/Address.sol",
         "file": "../lib/Address.sol",
         "id": 2300,
         "nodeType": "ImportDirective",
@@ -173,7 +173,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/SafeERC20.sol",
+        "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/SafeERC20.sol",
         "file": "../lib/SafeERC20.sol",
         "id": 2301,
         "nodeType": "ImportDirective",
@@ -184,7 +184,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/IRewardDistributionRecipient.sol",
+        "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/IRewardDistributionRecipient.sol",
         "file": "../lib/IRewardDistributionRecipient.sol",
         "id": 2302,
         "nodeType": "ImportDirective",
@@ -835,7 +835,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9769,
+                          "referencedDeclaration": 11146,
                           "src": "3722:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -917,7 +917,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9769,
+                              "referencedDeclaration": 11146,
                               "src": "3746:3:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -999,7 +999,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9769,
+                          "referencedDeclaration": 11146,
                           "src": "3801:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1029,7 +1029,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9801,
+                            "referencedDeclaration": 11178,
                             "src": "3821:4:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_LPTokenWrapper_$2417",
@@ -1335,7 +1335,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9769,
+                          "referencedDeclaration": 11146,
                           "src": "3958:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1417,7 +1417,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9769,
+                              "referencedDeclaration": 11146,
                               "src": "3982:3:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -1499,7 +1499,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9769,
+                          "referencedDeclaration": 11146,
                           "src": "4033:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -3367,7 +3367,7 @@
                           "name": "block",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9759,
+                          "referencedDeclaration": 11136,
                           "src": "5420:5:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_block",
@@ -4511,10 +4511,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9772,
-                        9773
+                        11149,
+                        11150
                       ],
-                      "referencedDeclaration": 9773,
+                      "referencedDeclaration": 11150,
                       "src": "6318:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -4570,7 +4570,7 @@
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9804,
+                        "referencedDeclaration": 11181,
                         "src": "6365:5:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_super$_VAMPWETHPOOL_$3045",
@@ -4621,7 +4621,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9769,
+                          "referencedDeclaration": 11146,
                           "src": "6406:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -4713,7 +4713,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9769,
+                      "referencedDeclaration": 11146,
                       "src": "6275:3:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -4932,10 +4932,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9772,
-                        9773
+                        11149,
+                        11150
                       ],
-                      "referencedDeclaration": 9773,
+                      "referencedDeclaration": 11150,
                       "src": "6524:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -4991,7 +4991,7 @@
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9804,
+                        "referencedDeclaration": 11181,
                         "src": "6574:5:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_super$_VAMPWETHPOOL_$3045",
@@ -5042,7 +5042,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9769,
+                          "referencedDeclaration": 11146,
                           "src": "6621:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -5134,7 +5134,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9769,
+                      "referencedDeclaration": 11146,
                       "src": "6492:3:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -5261,7 +5261,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9769,
+                              "referencedDeclaration": 11146,
                               "src": "6707:3:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -5466,7 +5466,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9769,
+                          "referencedDeclaration": 11146,
                           "src": "6861:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -5615,7 +5615,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9769,
+                                "referencedDeclaration": 11146,
                                 "src": "6920:3:4",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -5689,7 +5689,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9769,
+                                "referencedDeclaration": 11146,
                                 "src": "6967:3:4",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -5792,7 +5792,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9769,
+                                "referencedDeclaration": 11146,
                                 "src": "7016:3:4",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -5887,7 +5887,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9769,
+                      "referencedDeclaration": 11146,
                       "src": "6794:3:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -6011,7 +6011,7 @@
                         "name": "block",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9759,
+                        "referencedDeclaration": 11136,
                         "src": "7091:5:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_block",
@@ -6423,7 +6423,7 @@
                                               "name": "this",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 9803,
+                                              "referencedDeclaration": 11180,
                                               "src": "8371:4:4",
                                               "typeDescriptions": {
                                                 "typeIdentifier": "t_contract$_VAMPWETHPOOL_$3045",
@@ -6605,10 +6605,10 @@
                                         "name": "require",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [
-                                          9772,
-                                          9773
+                                          11149,
+                                          11150
                                         ],
-                                        "referencedDeclaration": 9773,
+                                        "referencedDeclaration": 11150,
                                         "src": "8391:7:4",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -7132,7 +7132,7 @@
                                             "name": "this",
                                             "nodeType": "Identifier",
                                             "overloadedDeclarations": [],
-                                            "referencedDeclaration": 9803,
+                                            "referencedDeclaration": 11180,
                                             "src": "8110:4:4",
                                             "typeDescriptions": {
                                               "typeIdentifier": "t_contract$_VAMPWETHPOOL_$3045",
@@ -7397,7 +7397,7 @@
                                             "name": "block",
                                             "nodeType": "Identifier",
                                             "overloadedDeclarations": [],
-                                            "referencedDeclaration": 9759,
+                                            "referencedDeclaration": 11136,
                                             "src": "8208:5:4",
                                             "typeDescriptions": {
                                               "typeIdentifier": "t_magic_block",
@@ -7905,7 +7905,7 @@
                                           "name": "this",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 9803,
+                                          "referencedDeclaration": 11180,
                                           "src": "7736:4:4",
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_contract$_VAMPWETHPOOL_$3045",
@@ -8170,7 +8170,7 @@
                                           "name": "block",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 9759,
+                                          "referencedDeclaration": 11136,
                                           "src": "7834:5:4",
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_magic_block",
@@ -8678,7 +8678,7 @@
                                         "name": "this",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 9803,
+                                        "referencedDeclaration": 11180,
                                         "src": "7362:4:4",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_contract$_VAMPWETHPOOL_$3045",
@@ -8943,7 +8943,7 @@
                                         "name": "block",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 9759,
+                                        "referencedDeclaration": 11136,
                                         "src": "7460:5:4",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_magic_block",
@@ -9111,7 +9111,7 @@
                             "name": "block",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9759,
+                            "referencedDeclaration": 11136,
                             "src": "8655:5:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_block",
@@ -9187,10 +9187,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9772,
-                        9773
+                        11149,
+                        11150
                       ],
-                      "referencedDeclaration": 9773,
+                      "referencedDeclaration": 11150,
                       "src": "8647:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -9261,7 +9261,7 @@
                         "name": "block",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9759,
+                        "referencedDeclaration": 11136,
                         "src": "8848:5:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_block",
@@ -9352,7 +9352,7 @@
                                 "name": "block",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9759,
+                                "referencedDeclaration": 11136,
                                 "src": "9000:5:4",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_block",
@@ -9800,7 +9800,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9803,
+                            "referencedDeclaration": 11180,
                             "src": "9177:4:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_VAMPWETHPOOL_$3045",
@@ -9943,7 +9943,7 @@
                         "name": "block",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9759,
+                        "referencedDeclaration": 11136,
                         "src": "9221:5:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_block",
@@ -10029,7 +10029,7 @@
                             "name": "block",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9759,
+                            "referencedDeclaration": 11136,
                             "src": "9261:5:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_block",
@@ -10273,7 +10273,7 @@
     "src": "2819:6518:4"
   },
   "legacyAST": {
-    "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/distribution/VAMPWETHPool.sol",
+    "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/distribution/VAMPWETHPool.sol",
     "exportedSymbols": {
       "LPTokenWrapper": [
         2417
@@ -10300,7 +10300,7 @@
         "src": "2819:24:4"
       },
       {
-        "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/Ownable.sol",
+        "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/Ownable.sol",
         "file": "../lib/Ownable.sol",
         "id": 2296,
         "nodeType": "ImportDirective",
@@ -10311,7 +10311,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/Math.sol",
+        "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/Math.sol",
         "file": "../lib/Math.sol",
         "id": 2297,
         "nodeType": "ImportDirective",
@@ -10322,7 +10322,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/IERC20.sol",
+        "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/IERC20.sol",
         "file": "../lib/IERC20.sol",
         "id": 2298,
         "nodeType": "ImportDirective",
@@ -10333,7 +10333,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/SafeMath.sol",
+        "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/SafeMath.sol",
         "file": "../lib/SafeMath.sol",
         "id": 2299,
         "nodeType": "ImportDirective",
@@ -10344,7 +10344,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/Address.sol",
+        "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/Address.sol",
         "file": "../lib/Address.sol",
         "id": 2300,
         "nodeType": "ImportDirective",
@@ -10355,7 +10355,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/SafeERC20.sol",
+        "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/SafeERC20.sol",
         "file": "../lib/SafeERC20.sol",
         "id": 2301,
         "nodeType": "ImportDirective",
@@ -10366,7 +10366,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/IRewardDistributionRecipient.sol",
+        "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/IRewardDistributionRecipient.sol",
         "file": "../lib/IRewardDistributionRecipient.sol",
         "id": 2302,
         "nodeType": "ImportDirective",
@@ -11017,7 +11017,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9769,
+                          "referencedDeclaration": 11146,
                           "src": "3722:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -11099,7 +11099,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9769,
+                              "referencedDeclaration": 11146,
                               "src": "3746:3:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -11181,7 +11181,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9769,
+                          "referencedDeclaration": 11146,
                           "src": "3801:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -11211,7 +11211,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9801,
+                            "referencedDeclaration": 11178,
                             "src": "3821:4:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_LPTokenWrapper_$2417",
@@ -11517,7 +11517,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9769,
+                          "referencedDeclaration": 11146,
                           "src": "3958:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -11599,7 +11599,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9769,
+                              "referencedDeclaration": 11146,
                               "src": "3982:3:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -11681,7 +11681,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9769,
+                          "referencedDeclaration": 11146,
                           "src": "4033:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -13549,7 +13549,7 @@
                           "name": "block",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9759,
+                          "referencedDeclaration": 11136,
                           "src": "5420:5:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_block",
@@ -14693,10 +14693,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9772,
-                        9773
+                        11149,
+                        11150
                       ],
-                      "referencedDeclaration": 9773,
+                      "referencedDeclaration": 11150,
                       "src": "6318:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -14752,7 +14752,7 @@
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9804,
+                        "referencedDeclaration": 11181,
                         "src": "6365:5:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_super$_VAMPWETHPOOL_$3045",
@@ -14803,7 +14803,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9769,
+                          "referencedDeclaration": 11146,
                           "src": "6406:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -14895,7 +14895,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9769,
+                      "referencedDeclaration": 11146,
                       "src": "6275:3:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -15114,10 +15114,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9772,
-                        9773
+                        11149,
+                        11150
                       ],
-                      "referencedDeclaration": 9773,
+                      "referencedDeclaration": 11150,
                       "src": "6524:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -15173,7 +15173,7 @@
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9804,
+                        "referencedDeclaration": 11181,
                         "src": "6574:5:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_super$_VAMPWETHPOOL_$3045",
@@ -15224,7 +15224,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9769,
+                          "referencedDeclaration": 11146,
                           "src": "6621:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -15316,7 +15316,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9769,
+                      "referencedDeclaration": 11146,
                       "src": "6492:3:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -15443,7 +15443,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9769,
+                              "referencedDeclaration": 11146,
                               "src": "6707:3:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -15648,7 +15648,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9769,
+                          "referencedDeclaration": 11146,
                           "src": "6861:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -15797,7 +15797,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9769,
+                                "referencedDeclaration": 11146,
                                 "src": "6920:3:4",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -15871,7 +15871,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9769,
+                                "referencedDeclaration": 11146,
                                 "src": "6967:3:4",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -15974,7 +15974,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9769,
+                                "referencedDeclaration": 11146,
                                 "src": "7016:3:4",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -16069,7 +16069,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9769,
+                      "referencedDeclaration": 11146,
                       "src": "6794:3:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -16193,7 +16193,7 @@
                         "name": "block",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9759,
+                        "referencedDeclaration": 11136,
                         "src": "7091:5:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_block",
@@ -16605,7 +16605,7 @@
                                               "name": "this",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 9803,
+                                              "referencedDeclaration": 11180,
                                               "src": "8371:4:4",
                                               "typeDescriptions": {
                                                 "typeIdentifier": "t_contract$_VAMPWETHPOOL_$3045",
@@ -16787,10 +16787,10 @@
                                         "name": "require",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [
-                                          9772,
-                                          9773
+                                          11149,
+                                          11150
                                         ],
-                                        "referencedDeclaration": 9773,
+                                        "referencedDeclaration": 11150,
                                         "src": "8391:7:4",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -17314,7 +17314,7 @@
                                             "name": "this",
                                             "nodeType": "Identifier",
                                             "overloadedDeclarations": [],
-                                            "referencedDeclaration": 9803,
+                                            "referencedDeclaration": 11180,
                                             "src": "8110:4:4",
                                             "typeDescriptions": {
                                               "typeIdentifier": "t_contract$_VAMPWETHPOOL_$3045",
@@ -17579,7 +17579,7 @@
                                             "name": "block",
                                             "nodeType": "Identifier",
                                             "overloadedDeclarations": [],
-                                            "referencedDeclaration": 9759,
+                                            "referencedDeclaration": 11136,
                                             "src": "8208:5:4",
                                             "typeDescriptions": {
                                               "typeIdentifier": "t_magic_block",
@@ -18087,7 +18087,7 @@
                                           "name": "this",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 9803,
+                                          "referencedDeclaration": 11180,
                                           "src": "7736:4:4",
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_contract$_VAMPWETHPOOL_$3045",
@@ -18352,7 +18352,7 @@
                                           "name": "block",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 9759,
+                                          "referencedDeclaration": 11136,
                                           "src": "7834:5:4",
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_magic_block",
@@ -18860,7 +18860,7 @@
                                         "name": "this",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 9803,
+                                        "referencedDeclaration": 11180,
                                         "src": "7362:4:4",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_contract$_VAMPWETHPOOL_$3045",
@@ -19125,7 +19125,7 @@
                                         "name": "block",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 9759,
+                                        "referencedDeclaration": 11136,
                                         "src": "7460:5:4",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_magic_block",
@@ -19293,7 +19293,7 @@
                             "name": "block",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9759,
+                            "referencedDeclaration": 11136,
                             "src": "8655:5:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_block",
@@ -19369,10 +19369,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9772,
-                        9773
+                        11149,
+                        11150
                       ],
-                      "referencedDeclaration": 9773,
+                      "referencedDeclaration": 11150,
                       "src": "8647:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -19443,7 +19443,7 @@
                         "name": "block",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9759,
+                        "referencedDeclaration": 11136,
                         "src": "8848:5:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_block",
@@ -19534,7 +19534,7 @@
                                 "name": "block",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9759,
+                                "referencedDeclaration": 11136,
                                 "src": "9000:5:4",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_block",
@@ -19982,7 +19982,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9803,
+                            "referencedDeclaration": 11180,
                             "src": "9177:4:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_VAMPWETHPOOL_$3045",
@@ -20125,7 +20125,7 @@
                         "name": "block",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9759,
+                        "referencedDeclaration": 11136,
                         "src": "9221:5:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_block",
@@ -20211,7 +20211,7 @@
                             "name": "block",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9759,
+                            "referencedDeclaration": 11136,
                             "src": "9261:5:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_block",
@@ -20460,7 +20460,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-09-21T23:10:11.370Z",
+  "updatedAt": "2020-09-23T12:28:30.811Z",
   "devdoc": {
     "methods": {}
   },

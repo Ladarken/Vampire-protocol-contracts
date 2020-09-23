@@ -38,7 +38,7 @@ let contractArtifacts = tokens.map((tokenName) => artifacts.require(contractName
 const migration = async (deployer, network, accounts) => {
   await Promise.all([
     // deployTestContracts(deployer, network),
-    deployDistribution(deployer, network, accounts),
+   // deployDistribution(deployer, network, accounts),
     // deploySecondLayer(deployer, network)
   ]);
 }

@@ -120,15 +120,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"reward\",\"type\":\"uint256\"}],\"name\":\"notifyRewardAmount\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"rewardDistribution\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_rewardDistribution\",\"type\":\"address\"}],\"name\":\"setRewardDistribution\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"isOwner()\":{\"details\":\"Returns true if the caller is the current owner.\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/IRewardDistributionRecipient.sol\":\"IRewardDistributionRecipient\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/Context.sol\":{\"keccak256\":\"0x931290799f25ef7475027c8ccde0dc81dc12a273aae498fd4219d0b40abf5aa2\",\"urls\":[\"bzz-raw://44397b3b927d361c5ec007ab118d3aec0325b3e1cb9a3d9db3e6312c6262cc0c\",\"dweb:/ipfs/QmYpN3NPFRAcPvZYQpxsmerCHM9GpZniGL5gUH5xvAJsWm\"]},\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/IRewardDistributionRecipient.sol\":{\"keccak256\":\"0xb4df29861dc9305b28793155887754f683cb5fa190bfaad5a6654c5b5f51622b\",\"urls\":[\"bzz-raw://a97c7d3b2970717ecdbeaef970ac905cd5e849d6a33483ff8cf1a431f63cd5be\",\"dweb:/ipfs/QmUMmShRp2zFfqijVm6yAwAtrAJG9p1iNKtAu6DwaQCx2w\"]},\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/Ownable.sol\":{\"keccak256\":\"0xb9ff2f22f40d668195df8bffe6c1db55b17bff128c2927b2f9958a522107c2e6\",\"urls\":[\"bzz-raw://9aa8820f92e475587380293d3284123f2cfe09ecff04d901be022a90277ff7f3\",\"dweb:/ipfs/QmYXfNdFdFAgkPaNG64vvhEufpi2qTyYtcBL1rSLTQnTyn\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"reward\",\"type\":\"uint256\"}],\"name\":\"notifyRewardAmount\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"rewardDistribution\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_rewardDistribution\",\"type\":\"address\"}],\"name\":\"setRewardDistribution\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"isOwner()\":{\"details\":\"Returns true if the caller is the current owner.\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/IRewardDistributionRecipient.sol\":\"IRewardDistributionRecipient\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/Context.sol\":{\"keccak256\":\"0x931290799f25ef7475027c8ccde0dc81dc12a273aae498fd4219d0b40abf5aa2\",\"urls\":[\"bzz-raw://44397b3b927d361c5ec007ab118d3aec0325b3e1cb9a3d9db3e6312c6262cc0c\",\"dweb:/ipfs/QmYpN3NPFRAcPvZYQpxsmerCHM9GpZniGL5gUH5xvAJsWm\"]},\"/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/IRewardDistributionRecipient.sol\":{\"keccak256\":\"0xb4df29861dc9305b28793155887754f683cb5fa190bfaad5a6654c5b5f51622b\",\"urls\":[\"bzz-raw://a97c7d3b2970717ecdbeaef970ac905cd5e849d6a33483ff8cf1a431f63cd5be\",\"dweb:/ipfs/QmUMmShRp2zFfqijVm6yAwAtrAJG9p1iNKtAu6DwaQCx2w\"]},\"/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/Ownable.sol\":{\"keccak256\":\"0xb9ff2f22f40d668195df8bffe6c1db55b17bff128c2927b2f9958a522107c2e6\",\"urls\":[\"bzz-raw://9aa8820f92e475587380293d3284123f2cfe09ecff04d901be022a90277ff7f3\",\"dweb:/ipfs/QmYXfNdFdFAgkPaNG64vvhEufpi2qTyYtcBL1rSLTQnTyn\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.17;\n\nimport \"../lib/Ownable.sol\";\n\n// File: contracts/IRewardDistributionRecipient.sol\ncontract IRewardDistributionRecipient is Ownable {\n    address public rewardDistribution;\n\n    function notifyRewardAmount(uint256 reward) external;\n\n    modifier onlyRewardDistribution() {\n        require(_msgSender() == rewardDistribution, \"Caller is not reward distribution\");\n        _;\n    }\n\n    function setRewardDistribution(address _rewardDistribution)\n    external\n    onlyOwner\n    {\n        rewardDistribution = _rewardDistribution;\n    }\n}",
-  "sourcePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/IRewardDistributionRecipient.sol",
+  "sourcePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/IRewardDistributionRecipient.sol",
   "ast": {
-    "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/IRewardDistributionRecipient.sol",
+    "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/IRewardDistributionRecipient.sol",
     "exportedSymbols": {
       "IRewardDistributionRecipient": [
         5373
@@ -149,7 +149,7 @@
         "src": "0:24:13"
       },
       {
-        "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/Ownable.sol",
+        "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/Ownable.sol",
         "file": "../lib/Ownable.sol",
         "id": 5339,
         "nodeType": "ImportDirective",
@@ -383,10 +383,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9772,
-                        9773
+                        11149,
+                        11150
                       ],
-                      "referencedDeclaration": 9773,
+                      "referencedDeclaration": 11150,
                       "src": "306:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -566,7 +566,7 @@
     "src": "0:560:13"
   },
   "legacyAST": {
-    "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/IRewardDistributionRecipient.sol",
+    "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/IRewardDistributionRecipient.sol",
     "exportedSymbols": {
       "IRewardDistributionRecipient": [
         5373
@@ -587,7 +587,7 @@
         "src": "0:24:13"
       },
       {
-        "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/Ownable.sol",
+        "absolutePath": "/Users/zigaflis/Documents/GitHub/Vampire-protocol-contracts/contracts/lib/Ownable.sol",
         "file": "../lib/Ownable.sol",
         "id": 5339,
         "nodeType": "ImportDirective",
@@ -821,10 +821,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9772,
-                        9773
+                        11149,
+                        11150
                       ],
-                      "referencedDeclaration": 9773,
+                      "referencedDeclaration": 11150,
                       "src": "306:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1009,7 +1009,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-09-21T09:34:55.923Z",
+  "updatedAt": "2020-09-23T11:17:14.108Z",
   "devdoc": {
     "methods": {
       "isOwner()": {
