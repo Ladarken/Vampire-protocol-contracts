@@ -526,23 +526,8 @@ contract Ownable is Context {
 }
 
 
-/**
- * Workflow:
- * 1) owner: create token contract
- * 2) owner: create presale contract
- * 3) owner: transfer required amount of tokens to presale contract
- * 4) owner: allow refund from presale contract by calling token.allowRefund
- * 5) <wait for start time>
- * 6) everyone sends ether to the presale contract and receives tokens in exchange
- * 7) <wait until end time or until hard cap is reached>
- * 8) if soft cap is reached:
- * 8.1) beneficiary calls withdraw() and receives
- * 8.2) beneficiary calls withdrawTokens() and receives the rest of non-sold tokens
- * 9) if soft cap is not reached:
- * 9.1) everyone calls refund() and receives their ether back in exchange for tokens
- * 9.2) owner calls withdrawTokens() and receives the refunded tokens
- */
-contract VotesPlatformTokenPreSale is Ownable {
+
+contract VampTokenSale is Ownable {
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
     IERC20 public usdt = IERC20(0x1e323A06F806B76CE96bd103258f2aDAE70957f1);
