@@ -549,13 +549,13 @@ contract VotesPlatformTokenPreSale is Ownable {
     address public collector = 0x8d6Cf44B6cA55550b96C4599B00b47A8EC67C596;
     string public name = "VAMP Presale";
 
-    IERC20 public VAMP = IERC20(0x9D829778f754F99db7056c632f0962501eF9BeEd);
+    IERC20 public VAMP = IERC20(0x95100CF1fFe1732145d907729a79bf83382048e2);
     address public beneficiary;
 
     uint256 public hardCap;
     uint256 public softCap;
     uint256 public tokensPerUSDT;
-    uint256 public purchaseLimitStageOne = 600 * 1e6;
+    uint256 public purchaseLimitStageOne = 500 * 1e6;
     uint256 public purchaseLimitStageTwo = 2000 * 1e6;
     uint256 public purchaseLimitStageThree = 10000 * 1e6;
 
@@ -576,9 +576,10 @@ contract VotesPlatformTokenPreSale is Ownable {
     mapping(address => uint256) sold;
     mapping(address => uint256) whitelistAmount;
     mapping(address => bool) whitelistedAddress;
+    mapping(address => uint256) tokensAlreadyBought;
 
     event GoalReached(uint256 amountRaised);
-    event SoftCapReached(uint256 softCap);
+    event HardCapReached(uint256 hardcap);
     event NewContribution(
         address indexed holder,
         uint256 tokenAmount,
@@ -607,15 +608,23 @@ contract VotesPlatformTokenPreSale is Ownable {
        // address[] memory whitelistAddresses // presale duration in hours
     ) public {
         hardCap = 550000 * 1e6;
-        tokensPerUSDT = _totalTokens / hardCap;
+        tokensPerUSDT = 10000000000000;
         startTime = _startTime;
         endTime = _startTime + 48 hours;
+        timeHardCapReached = endTime;
        // whitelistAddress = whitelistAddresses;
     }
 
     function() payable external {
         revert("not purchased by eth");
         // doPurchase(msg.sender);
+    }
+    function canClaim() public view returns (bool){
+         if(block.timestamp.add(1 hours) >= timeHardCapReached){
+             return true;
+         } else {
+             return false;
+         }
     }
 
   /*  function refund() external onlyAfter(endTime) {
@@ -644,8 +653,36 @@ contract VotesPlatformTokenPreSale is Ownable {
             return false;
         }
     }
+    function simulatebuy(uint256 amount) public view returns (uint256) {
+          uint256 tokens = amount * tokensPerUSDT;
+          return tokens;
+    }
     
-        
+    function tokensBought(address _address) public view returns (uint256) {
+        return tokensAlreadyBought[_address];
+    }
+    
+    function tokensAlreadySold() public view returns (uint256) {
+        return tokensSold;
+    }
+    
+    function raisedUSDT() public view returns (uint256) {
+        return usdtRaised;
+    }
+    function usdtDeposited(address _address) public view returns (uint256) {
+        return whitelistAmount[_address].add(sold[_address]);
+    }
+    
+    function getStage() public view returns (uint256) {
+         if (block.timestamp <= startTime.add(stageOne)) {
+             return 1;
+         } else if(block.timestamp >= startTime.add(stageOne) &&
+            block.timestamp <= startTime.add(stageTwo)) {
+                return 2;
+            } else {
+                return 3;
+            }
+    }
     
 
     function withdrawTokens() public onlyOwner onlyAfter(timeHardCapReached) {
@@ -659,7 +696,7 @@ contract VotesPlatformTokenPreSale is Ownable {
             whitelistAmount[msg.sender] = 0;
             } 
             }  
-        }
+        
         if(sold[msg.sender] > 0){
         VAMP.safeTransfer(msg.sender, sold[msg.sender]);
         sold[msg.sender] = 0;
@@ -667,11 +704,10 @@ contract VotesPlatformTokenPreSale is Ownable {
        
     }
 
-
     function purchase(uint256 amount) public {
       doPurchase(amount);
     }
-    function doPurchase(uint256 amount)
+     function doPurchase(uint256 amount)
         private
         onlyAfter(startTime)
         onlyBefore(endTime)
@@ -695,13 +731,35 @@ contract VotesPlatformTokenPreSale is Ownable {
                 amount
             );
             usdtRaised = usdtRaised.add(amount);
-            VAMP.safeTransfer(msg.sender,tokens);
+            tokensSold = tokensSold.add(tokens);
+            tokensAlreadyBought[msg.sender] = tokens;
+        } else if (
+            block.timestamp >= startTime.add(stageOne) &&
+            block.timestamp <= startTime.add(stageTwo)
+        ) {
+            //first 2 - 4 hours
+
+            uint256 tokens = amount * tokensPerUSDT;
+            require(
+                amount <= purchaseLimitStageTwo,
+                "Over purchase limit in stage two"
+            );
+            require(
+                sold[msg.sender].add(amount) <=
+                    purchaseLimitStageTwo,
+                "can't purchase more than allowed amount stage two"
+            );
+
+            usdt.safeTransferFrom(msg.sender, collector, amount);
+            sold[msg.sender] = sold[msg.sender].add(
+                amount
+            );
+            usdtRaised = usdtRaised.add(amount);
             sold[msg.sender] += tokens;
             tokensSold = tokensSold.add(tokens);
-        } else if (
-            block.timestamp >= startTime.add(stageOne)
-        ) {
-            //after 2 hours
+            tokensAlreadyBought[msg.sender] = tokens;
+        } else if (block.timestamp > startTime.add(stageTwo)) {
+            //4 - 48 hours
              require(
                 amount <= purchaseLimitStageThree,
                 "Over purchase limit in stage three"
@@ -714,13 +772,14 @@ contract VotesPlatformTokenPreSale is Ownable {
             uint256 tokens = amount * tokensPerUSDT;
             usdt.safeTransferFrom(msg.sender, collector, amount);
             usdtRaised = usdtRaised.add(amount);
-            VAMP.safeTransfer(msg.sender,tokens);
             sold[msg.sender] += tokens;
             tokensSold = tokensSold.add(tokens);
+            tokensAlreadyBought[msg.sender] = tokens;
         }
          if (usdtRaised == hardCap) {
           timeHardCapReached = block.timestamp;
           crowdsaleFinished = true;
+          emit HardCapReached(timeHardCapReached);
         }
 
     }
