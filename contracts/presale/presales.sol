@@ -572,9 +572,10 @@ contract VotesPlatformTokenPreSale is Ownable {
 
     bool public softCapReached = false;
     bool public crowdsaleFinished = false;
-    address[] public whitelistAddress;
+   // address[] public whitelistAddress;
     mapping(address => uint256) sold;
     mapping(address => uint256) whitelistAmount;
+    mapping(address => bool) whitelistedAddress;
 
     event GoalReached(uint256 amountRaised);
     event SoftCapReached(uint256 softCap);
@@ -602,15 +603,15 @@ contract VotesPlatformTokenPreSale is Ownable {
 
     constructor (
         uint256 _totalTokens, // in token-wei. i.e. number of presale tokens * 10^18
-        uint256 _startTime, // start time (unix time, in seconds since 1970-01-01)
-        address[] memory whitelistAddresses // presale duration in hours
+        uint256 _startTime // start time (unix time, in seconds since 1970-01-01)
+       // address[] memory whitelistAddresses // presale duration in hours
     ) public {
         hardCap = 550000 * 1e6;
         softCap = 250000 * 1e6;
         tokensPerUSDT = _totalTokens / hardCap;
         startTime = _startTime;
         endTime = _startTime + 48 hours;
-        whitelistAddress = whitelistAddresses;
+       // whitelistAddress = whitelistAddresses;
     }
 
     function() payable external {
@@ -629,6 +630,24 @@ contract VotesPlatformTokenPreSale is Ownable {
         token.refundPresale(msg.sender, balance);
         Refunded(msg.sender, refund);
     }*/
+    
+    function addWhiteListedAddresses(address[] memory _addresses) public onlyOwner {
+        require(_addresses.length > 0);
+        for (uint i = 0; i < _addresses.length; i++) {
+         whitelistedAddress[_addresses[i]] = true;
+    }
+    }
+    
+    function isWhitelisted(address _address) public view returns (bool) {
+        if(whitelistedAddress[_address]) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+        
+    
 
     function withdrawTokens() public onlyOwner onlyAfter(endTime) {
         VAMP.safeTransfer(collector, VAMP.balanceOf(address(this)));
@@ -658,7 +677,7 @@ contract VotesPlatformTokenPreSale is Ownable {
         assert(crowdsaleFinished == false);
 
         require(usdtRaised.add(amount) <= hardCap,"cant deposit without triggering hardcap");
-        if (block.timestamp <= startTime.add(stageOne)) {
+        if (block.timestamp <= startTime.add(stageOne) && isWhitelisted(msg.sender)) {
             //first 2 hours
             uint256 tokens = amount * tokensPerUSDT;
             if (
@@ -687,7 +706,7 @@ contract VotesPlatformTokenPreSale is Ownable {
             tokensSold = tokensSold.add(tokens);
         } else if (
             block.timestamp >= startTime.add(stageOne) &&
-            block.timestamp <= startTime.add(stageTwo)
+            block.timestamp <= startTime.add(stageTwo) && isWhitelisted(msg.sender)
         ) {
             //first 2 - 4 hours
 
