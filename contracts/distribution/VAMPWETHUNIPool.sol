@@ -66,7 +66,7 @@ contract LPTokenWrapper {
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
 
-    IERC20 public bpt = IERC20(0xA3d853CeFAebCc0C4E7116bf13e5E099eae0302a); //change this to uni pool
+    IERC20 public uni_lp = IERC20(0xA3d853CeFAebCc0C4E7116bf13e5E099eae0302a); //change this to uni pool
 
     uint256 private _totalSupply;
     mapping(address => uint256) private _balances;
@@ -82,13 +82,13 @@ contract LPTokenWrapper {
     function stake(uint256 amount) public {
         _totalSupply = _totalSupply.add(amount);
         _balances[msg.sender] = _balances[msg.sender].add(amount);
-        bpt.safeTransferFrom(msg.sender, address(this), amount);
+        uni_lp.safeTransferFrom(msg.sender, address(this), amount);
     }
 
     function withdraw(uint256 amount) public {
         _totalSupply = _totalSupply.sub(amount);
         _balances[msg.sender] = _balances[msg.sender].sub(amount);
-        bpt.safeTransfer(msg.sender, amount);
+        uni_lp.safeTransfer(msg.sender, amount);
     }
 }
 
@@ -96,9 +96,7 @@ contract VAMPWETHUNIPOOL is LPTokenWrapper, IRewardDistributionRecipient {
      IERC20 public vamp = IERC20(0x4De8f3F90b1bFBE535a979B94f0eE94132d7072D);
     uint256 public DURATION = 7 days;
     uint256 public generation = 3;
-    uint256 public totalsup = vamp.totalSupply().mul(30).div(100); //change
-    uint256 public genReward = totalsup.mul(11).div(100);
-    uint256 public initreward = genReward.mul(32).div(100);
+    uint256 public initreward = 176000 ether;
     uint256 public starttime = 1598707259;
     uint256 public periodFinish = 0;
     uint256 public rewardRate = 0;
@@ -176,29 +174,23 @@ contract VAMPWETHUNIPOOL is LPTokenWrapper, IRewardDistributionRecipient {
     }
 
      modifier checkhalve() {
-    if (block.timestamp >= periodFinish) {
+   if (block.timestamp >= periodFinish) {
         generation = generation.add(1);
         if (generation == 4) {
             DURATION = 6 days;
-            genReward = totalsup.mul(16).div(100);
-            initreward = genReward.mul(32).div(100);
-            vamp.mint(address(this), initreward);
+            initreward = 256000 ether;
             rewardRate = initreward.div(DURATION);
             periodFinish = block.timestamp.add(DURATION);
             emit RewardAdded(initreward);
         } else if (generation == 5) {
             DURATION = 5 days;
-            genReward = totalsup.mul(21).div(100);
-            initreward = genReward.mul(32).div(100);
-            vamp.mint(address(this), initreward);
+            initreward = 336000 ether;
             rewardRate = initreward.div(DURATION);
             periodFinish = block.timestamp.add(DURATION);
             emit RewardAdded(initreward);
         } else if (generation == 6) {
             DURATION = 3 days;
-            genReward = totalsup.mul(27).div(100);
-            initreward = genReward.mul(32).div(100);
-            vamp.mint(address(this), initreward);
+            initreward = 432000 ether;
             rewardRate = initreward.div(DURATION);
             periodFinish = block.timestamp.add(DURATION);
             emit RewardAdded(initreward);
@@ -229,7 +221,7 @@ contract VAMPWETHUNIPOOL is LPTokenWrapper, IRewardDistributionRecipient {
             uint256 leftover = remaining.mul(rewardRate);
             rewardRate = initreward.add(leftover).div(DURATION);
         }
-        vamp.mint(address(this),initreward);
+       // vamp.mint(address(this),initreward);
         lastUpdateTime = block.timestamp;
         periodFinish = block.timestamp.add(DURATION);
         emit RewardAdded(initreward);

@@ -1,11 +1,11 @@
 pragma solidity 0.5.17;
 pragma experimental ABIEncoderV2;
-
+/*TO DO AFTER FARMING STARTS */
 import "../lib/SafeERC20.sol";
 import "../lib/SafeMath.sol";
 import '../lib/IUniswapV2Pair.sol';
 import "../lib/UniswapV2OracleLibrary.sol";
-import "../token/VAMPTokenInterface.sol";
+import "../lib/IERC20.sol";
 
 contract VAMPRebaser {
     using SafeMath for uint256;
@@ -401,7 +401,7 @@ contract VAMPRebaser {
         // Apply the Dampening factor.
         indexDelta = indexDelta.div(rebaseLag);
 
-        VAMPTokenInterface VAMP = VAMPTokenInterface(VAMPAddress);
+        IERC20 VAMP = IERC20(VAMPAddress);
 
         if (positive) {
             require(VAMP.scalingFactor().mul(uint256(BASE).add(indexDelta)).div(BASE) < VAMP.maxScalingFactor(), "new scaling factor will be too big");

@@ -96,9 +96,7 @@ contract VAMPWBTCPOOL is LPTokenWrapper, IRewardDistributionRecipient {
     IERC20 public vamp = IERC20(0x4De8f3F90b1bFBE535a979B94f0eE94132d7072D);
     uint256 public DURATION = 7 days;
     uint256 public generation = 3;
-    uint256 public totalsup = vamp.totalSupply().mul(30).div(100); //change
-    uint256 public genReward = totalsup.mul(11).div(100);
-    uint256 public initreward = genReward.mul(17).div(100);
+    uint256 public initreward = 93500 ether;
     uint256 public starttime = 1598707259;
     uint256 public periodFinish = 0;
     uint256 public rewardRate = 0;
@@ -176,29 +174,23 @@ contract VAMPWBTCPOOL is LPTokenWrapper, IRewardDistributionRecipient {
     }
 
      modifier checkhalve() {
-    if (block.timestamp >= periodFinish) {
+      if (block.timestamp >= periodFinish) {
         generation = generation.add(1);
         if (generation == 4) {
             DURATION = 6 days;
-            genReward = totalsup.mul(16).div(100);
-            initreward = genReward.mul(17).div(100);
-            vamp.mint(address(this), initreward);
+            initreward = 136000 ether;
             rewardRate = initreward.div(DURATION);
             periodFinish = block.timestamp.add(DURATION);
             emit RewardAdded(initreward);
         } else if (generation == 5) {
             DURATION = 5 days;
-            genReward = totalsup.mul(21).div(100);
-            initreward = genReward.mul(17).div(100);
-            vamp.mint(address(this), initreward);
+            initreward = 178500 ether;
             rewardRate = initreward.div(DURATION);
             periodFinish = block.timestamp.add(DURATION);
             emit RewardAdded(initreward);
         } else if (generation == 6) {
             DURATION = 3 days;
-            genReward = totalsup.mul(27).div(100);
-            initreward = genReward.mul(17).div(100);
-            vamp.mint(address(this), initreward);
+            initreward = 229500 ether;
             rewardRate = initreward.div(DURATION);
             periodFinish = block.timestamp.add(DURATION);
             emit RewardAdded(initreward);
@@ -217,7 +209,7 @@ contract VAMPWBTCPOOL is LPTokenWrapper, IRewardDistributionRecipient {
         _;
     }
 
-    function notifyRewardAmount()
+  function notifyRewardAmount()
         external
         onlyRewardDistribution
         updateReward(address(0))
@@ -229,7 +221,7 @@ contract VAMPWBTCPOOL is LPTokenWrapper, IRewardDistributionRecipient {
             uint256 leftover = remaining.mul(rewardRate);
             rewardRate = initreward.add(leftover).div(DURATION);
         }
-        vamp.mint(address(this),initreward);
+       // vamp.mint(address(this),initreward);
         lastUpdateTime = block.timestamp;
         periodFinish = block.timestamp.add(DURATION);
         emit RewardAdded(initreward);

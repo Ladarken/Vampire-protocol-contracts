@@ -1,4 +1,4 @@
-pragma solidity 0.4.24;
+pragma solidity 0.5.17;
 
 /* 
     VAMP.sol
@@ -132,17 +132,17 @@ contract ERC20Detailed is Initializable, IERC20 {
   string private _symbol;
   uint8 private _decimals;
 
-  function initialize(string name, string symbol, uint8 decimals) internal initializer {
+  function initialize( string memory name, string memory symbol, uint8  decimals) internal initializer {
     _name = name;
     _symbol = symbol;
     _decimals = decimals;
   }
 
-  function name() public view returns(string) {
+  function name() public view returns(string memory) {
     return _name;
   }
 
-  function symbol() public view returns(string) {
+  function symbol() public view returns(string memory) {
     return _symbol;
   }
 
@@ -349,11 +349,22 @@ contract VAMP is Ownable, ERC20Detailed {
 
     uint256 private _totalSupply;
     uint256 private _gonsPerFragment;
+    address private rebaser;
     mapping(address => uint256) private _gonBalances;
 	
 	// This is denominated in Fragments, because the gons-fragments conversion might change before
     // it's fully paid.
     mapping (address => mapping (address => uint256)) private _allowedFragments;
+
+    
+  modifier onlyRebaser() {
+    require(msg.sender == rebaser);
+    _;
+  }
+
+    function setRebaser(address _rebaser) public onlyOwner {
+        rebaser = _rebaser;
+    }
 
 	/**
      * @dev Notifies Fragments contract about a new rebase cycle.
@@ -362,7 +373,7 @@ contract VAMP is Ownable, ERC20Detailed {
      */
     function rebase(int256 supplyDelta)
         external
-        onlyOwner
+        onlyRebaser
         returns (uint256)
     {
 	
@@ -422,6 +433,33 @@ contract VAMP is Ownable, ERC20Detailed {
         _gonsPerFragment = TOTAL_GONS.div(_totalSupply);
 
         emit Transfer(address(0x0), msg.sender, _totalSupply);
+    }
+
+    function mint(address account, uint256 amount) public onlyOwner returns(bool) {
+        require(amount>0);
+        _mint(account, amount);
+        return true;
+    }
+    
+    function burn(uint256 amount) public onlyOwner returns(bool) {
+        _burn(msg.sender, amount);
+        return true;
+    }
+
+     function _mint(address account, uint256 amount) internal {
+        require(account != address(0), "ERC20: mint to the zero address");
+       // uint256 merValue = amount.mul(_gonsPerFragment);
+        _totalSupply = _totalSupply.add(amount);
+        _gonBalances[account] = _gonBalances[account].add(amount);
+        emit Transfer(address(0), account, amount);
+    }
+
+    function _burn(address account, uint256 value) internal {
+        require(account != address(0));
+       // uint256 merValue = value.mul(_gonsPerFragment);
+        _totalSupply = _totalSupply.sub(value);
+        _gonBalances[account] = _gonBalances[account].sub(value);
+        emit Transfer(account, address(0), value);
     }
 	
 	/**
@@ -571,7 +609,7 @@ contract VAMP is Ownable, ERC20Detailed {
      * @param data Transaction data payload
      */
 	
-    function addTransaction(address destination, bytes data)
+    function addTransaction(address destination, bytes calldata data)
         external
         onlyOwner
     {
@@ -632,7 +670,7 @@ contract VAMP is Ownable, ERC20Detailed {
      * @return True on success
      */
 
-    function externalCall(address destination, bytes data)
+    function externalCall(address destination, bytes memory data)
         internal
         returns (bool)
     {
