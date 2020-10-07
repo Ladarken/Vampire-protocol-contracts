@@ -1,15 +1,15 @@
 {
   "contractName": "Math",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Standard math utilities missing in the Solidity language.\",\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/zigaf/Documents/zerochan/Vampire-protocol/contracts/lib/Math.sol\":\"Math\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/zigaf/Documents/zerochan/Vampire-protocol/contracts/lib/Math.sol\":{\"keccak256\":\"0x8250fb28d14e362975585ff99b26b7bc8d040d6a96919fea3bea90c26f2bc78c\",\"urls\":[\"bzz-raw://91beaf0b376276c1630178430de97fb0eefd5f606a9ed2362f14d93e31c602ac\",\"dweb:/ipfs/QmY3eaykj79nYff3qTkSJKrZZBwhMnYmPQ9KBEgeiTbH5k\"]}},\"version\":1}",
-  "bytecode": "0x60556023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a72315820e44814aba60437adba64071cfb011c28c8bd55f4f3f36172ae29726cc12297d764736f6c63430005110032",
-  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a72315820e44814aba60437adba64071cfb011c28c8bd55f4f3f36172ae29726cc12297d764736f6c63430005110032",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Standard math utilities missing in the Solidity language.\",\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/Math.sol\":\"Math\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/Math.sol\":{\"keccak256\":\"0x8250fb28d14e362975585ff99b26b7bc8d040d6a96919fea3bea90c26f2bc78c\",\"urls\":[\"bzz-raw://91beaf0b376276c1630178430de97fb0eefd5f606a9ed2362f14d93e31c602ac\",\"dweb:/ipfs/QmY3eaykj79nYff3qTkSJKrZZBwhMnYmPQ9KBEgeiTbH5k\"]}},\"version\":1}",
+  "bytecode": "0x60556023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a7231582098e0555d36cd9733cda454c57adb674fdfb468ddabb7e6bc0e45f7e57a7785d664736f6c63430005110032",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a7231582098e0555d36cd9733cda454c57adb674fdfb468ddabb7e6bc0e45f7e57a7785d664736f6c63430005110032",
   "sourceMap": "147:668:15:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
   "deployedSourceMap": "147:668:15:-;;;;;;;;",
   "source": "// File: @openzeppelin/contracts/math/Math.sol\n\npragma solidity ^0.5.0;\n\n/**\n * @dev Standard math utilities missing in the Solidity language.\n */\nlibrary Math {\n    /**\n     * @dev Returns the largest of two numbers.\n     */\n    function max(uint256 a, uint256 b) internal pure returns (uint256) {\n        return a >= b ? a : b;\n    }\n\n    /**\n     * @dev Returns the smallest of two numbers.\n     */\n    function min(uint256 a, uint256 b) internal pure returns (uint256) {\n        return a < b ? a : b;\n    }\n\n    /**\n     * @dev Returns the average of two numbers. The result is rounded towards\n     * zero.\n     */\n    function average(uint256 a, uint256 b) internal pure returns (uint256) {\n        // (a + b) / 2 can overflow, so we distribute\n        return (a / 2) + (b / 2) + ((a % 2 + b % 2) / 2);\n    }\n}",
-  "sourcePath": "C:\\Users\\zigaf\\Documents\\zerochan\\Vampire-protocol\\contracts\\lib\\Math.sol",
+  "sourcePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/Math.sol",
   "ast": {
-    "absolutePath": "/C/Users/zigaf/Documents/zerochan/Vampire-protocol/contracts/lib/Math.sol",
+    "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/Math.sol",
     "exportedSymbols": {
       "Math": [
         5134
@@ -939,7 +939,7 @@
     "src": "48:767:15"
   },
   "legacyAST": {
-    "absolutePath": "/C/Users/zigaf/Documents/zerochan/Vampire-protocol/contracts/lib/Math.sol",
+    "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/Math.sol",
     "exportedSymbols": {
       "Math": [
         5134
@@ -1874,7 +1874,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-09-23T19:54:18.792Z",
+  "updatedAt": "2020-10-07T10:04:52.719Z",
   "devdoc": {
     "details": "Standard math utilities missing in the Solidity language.",
     "methods": {}

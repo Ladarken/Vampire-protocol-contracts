@@ -20,7 +20,7 @@ module.exports = migration;
 //TODO
 async function deployToken(deployer, network) {
   await deployer.deploy(VAMPImplementation);
-  if (network != "mainnet") {
+  if (network !== "mainnet") {
     await deployer.deploy(VAMPProxy,
       "VAMP",
       "VAMP",

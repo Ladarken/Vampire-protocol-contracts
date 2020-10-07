@@ -17,12 +17,12 @@ contract VAMPRebaser {
     }
 
     struct UniVars {
-      uint256 VAMPsToUni;
-      uint256 amountFromReserves;
-      uint256 mintToReserves;
+        uint256 VAMPsToUni;
+        uint256 amountFromReserves;
+        uint256 mintToReserves;
     }
 
-    uint256 public constant BASE = 10**18;
+    uint256 public constant BASE = 10 ** 18;
 
     /// @notice Spreads out getting to the target price
     uint256 public rebaseLag;
@@ -148,10 +148,11 @@ contract VAMPRebaser {
         address uniswap_factory,
         address reservesContract_
     )
-        public
+    public
     {
         minRebaseTimeIntervalSec = 12 hours;
-        rebaseWindowOffsetSec = 28800; // 8am/8pm UTC rebases
+        rebaseWindowOffsetSec = 28800;
+        // 8am/8pm UTC rebases
         reservesContract = reservesContract_;
         (address token0, address token1) = sortTokens(VAMPAddress_, reserveToken_);
 
@@ -172,7 +173,7 @@ contract VAMPRebaser {
 
         // target 10% slippage
         // 5.4%
-        maxSlippageFactor = 5409258 * 10**10;
+        maxSlippageFactor = 5409258 * 10 ** 10;
 
         // 1 YCRV
         targetRate = BASE;
@@ -181,10 +182,10 @@ contract VAMPRebaser {
         rebaseLag = 10;
 
         // 10%
-        rebaseMintPerc = 10**17;
+        rebaseMintPerc = 10 ** 17;
 
         // 5%
-        deviationThreshold = 5 * 10**16;
+        deviationThreshold = 5 * 10 ** 16;
 
         // 60 minutes
         rebaseWindowLengthSec = 60 * 60;
@@ -199,8 +200,8 @@ contract VAMPRebaser {
     *
     */
     function setMaxSlippageFactor(uint256 maxSlippageFactor_)
-        public
-        onlyGov
+    public
+    onlyGov
     {
         uint256 oldSlippageFactor = maxSlippageFactor;
         maxSlippageFactor = maxSlippageFactor_;
@@ -213,8 +214,8 @@ contract VAMPRebaser {
     *
     */
     function setRebaseMintPerc(uint256 rebaseMintPerc_)
-        public
-        onlyGov
+    public
+    onlyGov
     {
         uint256 oldPerc = rebaseMintPerc;
         rebaseMintPerc = rebaseMintPerc_;
@@ -228,8 +229,8 @@ contract VAMPRebaser {
     *
     */
     function setReserveContract(address reservesContract_)
-        public
-        onlyGov
+    public
+    onlyGov
     {
         address oldReservesContract = reservesContract;
         reservesContract = reservesContract_;
@@ -241,8 +242,8 @@ contract VAMPRebaser {
      * @param pendingGov_ The address of the rebaser contract to use for authentication.
      */
     function _setPendingGov(address pendingGov_)
-        external
-        onlyGov
+    external
+    onlyGov
     {
         address oldPendingGov = pendingGov;
         pendingGov = pendingGov_;
@@ -253,7 +254,7 @@ contract VAMPRebaser {
      *
      */
     function _acceptGov()
-        external
+    external
     {
         require(msg.sender == pendingGov, "!pending");
         address oldGov = gov;
@@ -270,8 +271,8 @@ contract VAMPRebaser {
      * @param deviationThreshold_ The new exchange rate threshold fraction.
      */
     function setDeviationThreshold(uint256 deviationThreshold_)
-        external
-        onlyGov
+    external
+    onlyGov
     {
         require(deviationThreshold > 0);
         uint256 oldDeviationThreshold = deviationThreshold;
@@ -288,8 +289,8 @@ contract VAMPRebaser {
      * @param rebaseLag_ The new rebase lag parameter.
      */
     function setRebaseLag(uint256 rebaseLag_)
-        external
-        onlyGov
+    external
+    onlyGov
     {
         require(rebaseLag_ > 0);
         rebaseLag = rebaseLag_;
@@ -300,8 +301,8 @@ contract VAMPRebaser {
      * @param targetRate_ The new target rate parameter.
      */
     function setTargetRate(uint256 targetRate_)
-        external
-        onlyGov
+    external
+    onlyGov
     {
         require(targetRate_ > 0);
         targetRate = targetRate_;
@@ -324,8 +325,8 @@ contract VAMPRebaser {
         uint256 rebaseWindowOffsetSec_,
         uint256 rebaseWindowLengthSec_
     )
-        external
-        onlyGov
+    external
+    onlyGov
     {
         require(minRebaseTimeIntervalSec_ > 0);
         require(rebaseWindowOffsetSec_ < minRebaseTimeIntervalSec_);
@@ -339,11 +340,11 @@ contract VAMPRebaser {
     *
     */
     function init_twap()
-        public
+    public
     {
         require(timeOfTWAPInit == 0, "already activated");
         (uint priceCumulative, uint32 blockTimestamp) =
-           UniswapV2OracleLibrary.currentCumulativePrices(uniswap_pair, isToken0);
+        UniswapV2OracleLibrary.currentCumulativePrices(uniswap_pair, isToken0);
         require(blockTimestamp > 0, "no trades");
         blockTimestampLast = blockTimestamp;
         priceCumulativeLast = priceCumulative;
@@ -354,7 +355,7 @@ contract VAMPRebaser {
     *   @dev One way function, cannot be undone, callable by anyone
     */
     function activate_rebasing()
-        public
+    public
     {
         require(timeOfTWAPInit > 0, "twap wasn't initiated, call init_twap()");
         // cannot enable prior to end of rebaseDelay
@@ -371,7 +372,7 @@ contract VAMPRebaser {
      *      and targetRate is 1e18
      */
     function rebase()
-        public
+    public
     {
         // EOA only or gov
         require(msg.sender == tx.origin || msg.sender == gov);
@@ -401,13 +402,13 @@ contract VAMPRebaser {
         // Apply the Dampening factor.
         indexDelta = indexDelta.div(rebaseLag);
 
-        IERC20 VAMP = IERC20(VAMPAddress);
+        IERC20 Vamp = IERC20(VAMPAddress);
 
-        if (positive) {
-            require(VAMP.scalingFactor().mul(uint256(BASE).add(indexDelta)).div(BASE) < VAMP.maxScalingFactor(), "new scaling factor will be too big");
-        }
+        //        if (positive) {
+        //            require(VAMP.scalingFactor().mul(uint256(BASE).add(indexDelta)).div(BASE) < VAMP.maxScalingFactor(), "new scaling factor will be too big");
+        //        }
 
-        uint256 currSupply = VAMP.totalSupply();
+        uint256 currSupply = Vamp.totalSupply();
 
         uint256 mintAmount;
         // Reduce indexDelta to account for minting.
@@ -417,12 +418,12 @@ contract VAMPRebaser {
             mintAmount = currSupply.mul(mintPerc).div(BASE);
         }
 
-        // Perform rebase.
-        VAMP.rebase(epoch, indexDelta, positive);
-        assert(VAMP.scalingFactor() <= VAMP.maxScalingFactor());
+        // Perform rebase. - this is fucked due to the fat file we have for Vamp tokends
+        //Vamp.rebase(epoch, indexDelta, positive);
+        //        assert(VAMP.scalingFactor() <= VAMP.maxScalingFactor());
 
         // Perform actions after rebase.
-       // afterRebase(mintAmount, offPegPerc);
+        // afterRebase(mintAmount, offPegPerc);
     }
 
     /*function uniswapV2Call(
@@ -627,16 +628,17 @@ contract VAMPRebaser {
      *      to be able to manipulate this during that time period of highest vuln.
      */
     function getTWAP()
-        internal
-        returns (uint256)
+    internal
+    returns (uint256)
     {
-      (uint priceCumulative, uint32 blockTimestamp) =
-         UniswapV2OracleLibrary.currentCumulativePrices(uniswap_pair, isToken0);
-       uint32 timeElapsed = blockTimestamp - blockTimestampLast; // overflow is desired
+        (uint priceCumulative, uint32 blockTimestamp) =
+        UniswapV2OracleLibrary.currentCumulativePrices(uniswap_pair, isToken0);
+        uint32 timeElapsed = blockTimestamp - blockTimestampLast;
+        // overflow is desired
 
-       // no period check as is done in isRebaseWindow
+        // no period check as is done in isRebaseWindow
 
-       // overflow is desired, casting never truncates
+        // overflow is desired, casting never truncates
         // cumulative price is in (uq112x112 price * seconds) units so we simply wrap it after division by time elapsed
         FixedPoint.uq112x112 memory priceAverage = FixedPoint.uq112x112(uint224((priceCumulative - priceCumulativeLast) / timeElapsed));
 
@@ -651,17 +653,18 @@ contract VAMPRebaser {
      *
      */
     function getCurrentTWAP()
-        public
-        view
-        returns (uint256)
+    public
+    view
+    returns (uint256)
     {
-      (uint priceCumulative, uint32 blockTimestamp) =
-         UniswapV2OracleLibrary.currentCumulativePrices(uniswap_pair, isToken0);
-       uint32 timeElapsed = blockTimestamp - blockTimestampLast; // overflow is desired
+        (uint priceCumulative, uint32 blockTimestamp) =
+        UniswapV2OracleLibrary.currentCumulativePrices(uniswap_pair, isToken0);
+        uint32 timeElapsed = blockTimestamp - blockTimestampLast;
+        // overflow is desired
 
-       // no period check as is done in isRebaseWindow
+        // no period check as is done in isRebaseWindow
 
-       // overflow is desired, casting never truncates
+        // overflow is desired, casting never truncates
         // cumulative price is in (uq112x112 price * seconds) units so we simply wrap it after division by time elapsed
         FixedPoint.uq112x112 memory priceAverage = FixedPoint.uq112x112(uint224((priceCumulative - priceCumulativeLast) / timeElapsed));
 
@@ -690,9 +693,9 @@ contract VAMPRebaser {
      * @return Computes in % how far off market is from peg
      */
     function computeOffPegPerc(uint256 rate)
-        private
-        view
-        returns (uint256, bool)
+    private
+    view
+    returns (uint256, bool)
     {
         if (withinDeviationThreshold(rate)) {
             return (0, false);
@@ -712,15 +715,15 @@ contract VAMPRebaser {
      *         Otherwise, returns false.
      */
     function withinDeviationThreshold(uint256 rate)
-        private
-        view
-        returns (bool)
+    private
+    view
+    returns (bool)
     {
         uint256 absoluteDeviationThreshold = targetRate.mul(deviationThreshold)
-            .div(10 ** 18);
+        .div(10 ** 18);
 
         return (rate >= targetRate && rate.sub(targetRate) < absoluteDeviationThreshold)
-            || (rate < targetRate && targetRate.sub(rate) < absoluteDeviationThreshold);
+        || (rate < targetRate && targetRate.sub(rate) < absoluteDeviationThreshold);
     }
 
     /* - Uniswap Helpers - */
@@ -755,9 +758,9 @@ contract VAMPRebaser {
         address token0,
         address token1
     )
-        internal
-        pure
-        returns (address pair)
+    internal
+    pure
+    returns (address pair)
     {
         pair = address(uint(keccak256(abi.encodePacked(
                 hex'ff',
@@ -772,9 +775,9 @@ contract VAMPRebaser {
         address tokenA,
         address tokenB
     )
-        internal
-        pure
-        returns (address token0, address token1)
+    internal
+    pure
+    returns (address token0, address token1)
     {
         require(tokenA != tokenB, 'UniswapV2Library: IDENTICAL_ADDRESSES');
         (token0, token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
@@ -789,13 +792,13 @@ contract VAMPRebaser {
      * @param data Transaction data payload
      */
     function addTransaction(address destination, bytes calldata data)
-        external
-        onlyGov
+    external
+    onlyGov
     {
         transactions.push(Transaction({
-            enabled: true,
-            destination: destination,
-            data: data
+        enabled : true,
+        destination : destination,
+        data : data
         }));
     }
 
@@ -805,8 +808,8 @@ contract VAMPRebaser {
      *              Transaction ordering may have changed since adding.
      */
     function removeTransaction(uint index)
-        external
-        onlyGov
+    external
+    onlyGov
     {
         require(index < transactions.length, "index out of bounds");
 
@@ -822,8 +825,8 @@ contract VAMPRebaser {
      * @param enabled True for enabled, false for disabled.
      */
     function setTransactionEnabled(uint index, bool enabled)
-        external
-        onlyGov
+    external
+    onlyGov
     {
         require(index < transactions.length, "index must be in range of stored tx list");
         transactions[index].enabled = enabled;
@@ -836,32 +839,32 @@ contract VAMPRebaser {
      * @return True on success
      */
     function externalCall(address destination, bytes memory data)
-        internal
-        returns (bool)
+    internal
+    returns (bool)
     {
         bool result;
-        assembly {  // solhint-disable-line no-inline-assembly
-            // "Allocate" memory for output
-            // (0x40 is where "free memory" pointer is stored by convention)
+        assembly {// solhint-disable-line no-inline-assembly
+        // "Allocate" memory for output
+        // (0x40 is where "free memory" pointer is stored by convention)
             let outputAddress := mload(0x40)
 
-            // First 32 bytes are the padded length of data, so exclude that
+        // First 32 bytes are the padded length of data, so exclude that
             let dataAddress := add(data, 32)
 
             result := call(
-                // 34710 is the value that solidity is currently emitting
-                // It includes callGas (700) + callVeryLow (3, to pay for SUB)
-                // + callValueTransferGas (9000) + callNewAccountGas
-                // (25000, in case the destination address does not exist and needs creating)
-                sub(gas, 34710),
+            // 34710 is the value that solidity is currently emitting
+            // It includes callGas (700) + callVeryLow (3, to pay for SUB)
+            // + callValueTransferGas (9000) + callNewAccountGas
+            // (25000, in case the destination address does not exist and needs creating)
+            sub(gas, 34710),
 
 
-                destination,
-                0, // transfer value in wei
-                dataAddress,
-                mload(data),  // Size of the input, in bytes. Stored in position 0 of the array.
-                outputAddress,
-                0  // Output is ignored, therefore the output size is zero
+            destination,
+            0, // transfer value in wei
+            dataAddress,
+            mload(data), // Size of the input, in bytes. Stored in position 0 of the array.
+            outputAddress,
+            0  // Output is ignored, therefore the output size is zero
             )
         }
         return result;
