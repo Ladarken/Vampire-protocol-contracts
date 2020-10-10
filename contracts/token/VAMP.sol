@@ -327,7 +327,7 @@ contract VAMP is VAMPToken {
 
     constructor() public {
 
-        Ownable.initialize(msg.sender);
+        OwnableExtended.initialize(msg.sender);
         ERC20Detailed.initialize("VAMP", "VAMP", uint8(DECIMALS));
 
         _totalSupply = INITIAL_FRAGMENTS_SUPPLY;

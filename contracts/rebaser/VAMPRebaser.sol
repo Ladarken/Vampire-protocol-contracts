@@ -82,9 +82,6 @@ contract VAMPRebaser {
     /// @notice reserve token
     address public reserveToken;
 
-    /// @notice Reserves vault contract
-    address public reservesContract;
-
     /// @notice pair for reserveToken <> VAMP
     address public uniswap_pair;
 
@@ -116,12 +113,6 @@ contract VAMPRebaser {
      */
     event NewRebaseMintPercent(uint256 oldRebaseMintPerc, uint256 newRebaseMintPerc);
 
-
-    /**
-     * @notice Sets the reserve contract
-     */
-    event NewReserveContract(address oldReserveContract, address newReserveContract);
-
     /**
      * @notice Sets the reserve contract
      */
@@ -145,26 +136,22 @@ contract VAMPRebaser {
     constructor(
         address VAMPAddress_,
         address reserveToken_,
-        address uniswap_factory,
-        address reservesContract_
+        address uniswap_factory
     )
     public
     {
         minRebaseTimeIntervalSec = 12 hours;
         rebaseWindowOffsetSec = 28800;
         // 8am/8pm UTC rebases
-        reservesContract = reservesContract_;
         (address token0, address token1) = sortTokens(VAMPAddress_, reserveToken_);
 
         // used for interacting with uniswap
         if (token0 == VAMPAddress_) {
             isToken0 = true;
         }
+
         // uniswap VAMP<>Reserve pair
         uniswap_pair = pairFor(uniswap_factory, token0, token1);
-
-        // Reserves contract is mutable
-        reservesContract = reservesContract_;
 
         // Reserve token is not mutable. Must deploy a new rebaser to update it
         reserveToken = reserveToken_;
@@ -220,21 +207,6 @@ contract VAMPRebaser {
         uint256 oldPerc = rebaseMintPerc;
         rebaseMintPerc = rebaseMintPerc_;
         emit NewRebaseMintPercent(oldPerc, rebaseMintPerc_);
-    }
-
-
-    /**
-    @notice Updates reserve contract
-    @param reservesContract_ the new reserve contract
-    *
-    */
-    function setReserveContract(address reservesContract_)
-    public
-    onlyGov
-    {
-        address oldReservesContract = reservesContract;
-        reservesContract = reservesContract_;
-        emit NewReserveContract(oldReservesContract, reservesContract_);
     }
 
 
@@ -734,7 +706,6 @@ contract VAMPRebaser {
      * @param reserveIn reserves of the asset being sold
      * @param reserveOut reserves if the asset being purchased
      */
-
     function getAmountOut(
         uint amountIn,
         uint reserveIn,

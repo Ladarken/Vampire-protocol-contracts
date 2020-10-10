@@ -1,9 +1,11 @@
 const Vamp = artifacts.require("VAMP")
+const VampRebaser = artifacts.require("VAMPRebaser")
 
 contract("Test Vamp Deployed", async accounts => {
     it('should deploy successfully', async () => {
-        let instance = await Vamp.deployed();
-        let balance = await instance.getBalance.call(accounts[0]);
-        assert.equal(balance.valueOf(), 10000);
+        let vampToken = await Vamp.deployed();
+        assert.isNotNull(vampToken.address);
+        let rebaser = await VampRebaser.deployed();
+        assert.isNotNull(rebaser.address);
     });
 })

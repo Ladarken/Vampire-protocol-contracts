@@ -58,41 +58,18 @@ VAMP Governance will be timelocked after launch.
 
 # Development
 ### Building
-This repo uses truffle. Ensure that you have truffle installed. Given the composability aspect of this
+This repo uses truffle. Ensure that you have truffle installed. 
 
 Then, to build the contracts run:
 ```
 $ truffle compile
 ```
 
-
-
-To run tests, run against a single test package, i.e.:
+To run tests, we use the truffle test/ganache-cli setup:
 ```
 $ sh startBlockchain.sh
-$ truffle migrate --network distribution
-$ python scripts/clean.py
-$ cd jsLib
-$ jest deployment
-$ jest token
-$ jest rebase
-$ jest governance
-$ jest governorAlpha
-$ jest distribution
+$ truffle test
 ```
-The need to run one-by-one seems to be a limitation of jest + ganache.
-
-The distribution tests require specific tokens. These are acquired by using the ganache unlock_account function. If you receive fails, the owner likely decreased their ownership of that token. Just replace any instances of that address with another holder of the token.
-
-Note: some governance tests require a different ganache setup. You will encounter a warning (but not a failed test) if the wrong type of ganache is setup. To run the correct one:
-```
-$ sh startBlockchainMining.sh
-$ truffle migrate --network distribution
-$ python scripts/clean.py
-$ cd jsLib
-$ jest governance
-```
-
 
 #### Attributions
 Much of this codebase is modified from existing works, including:

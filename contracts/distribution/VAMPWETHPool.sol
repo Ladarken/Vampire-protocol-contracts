@@ -58,10 +58,6 @@ import "../lib/Address.sol";
 import "../lib/SafeERC20.sol";
 import "../lib/IRewardDistributionRecipient.sol";
 
-interface VAMP {
-    function scalingFactor() external returns (uint256);
-}
-
 
 contract LPTokenWrapper {
     using SafeMath for uint256;

@@ -20,6 +20,8 @@ contract VAMPTokenInterface is VAMPTokenStorage {
 
 
     // FUNCTIONS
+    function setRebaser(address _rebaser) public;
+
     function rebase(int256 supplyDelta) external returns (uint256);
 
     function mint(address account, uint256 amount) public returns (bool);

@@ -2,7 +2,7 @@ pragma solidity 0.5.17;
 
 import "./ERC20Detailed.sol";
 
-contract Ownable is ERC20Detailed {
+contract OwnableExtended is ERC20Detailed {
 
     address private _owner;
     uint256 private _ownershipLocked;

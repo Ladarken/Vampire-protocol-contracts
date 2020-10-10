@@ -1,11 +1,11 @@
 pragma solidity 0.5.17;
 
 import "../lib/SafeMath.sol";
-import "./SafeMathInt.sol";
-import "./Ownable.sol";
+import "../lib/SafeMathInt.sol";
+import "../lib/OwnableExtended.sol";
 
 // Storage for a VAMP token
-contract VAMPTokenStorage is Ownable {
+contract VAMPTokenStorage is OwnableExtended {
 
     using SafeMath for uint256;
     using SafeMathInt for int256;

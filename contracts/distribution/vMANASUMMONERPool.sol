@@ -58,9 +58,6 @@ import "../lib/Address.sol";
 import "../lib/SafeERC20.sol";
 import "../lib/IRewardDistributionRecipient.sol";
 
-interface VAMP {
-    function scalingFactor() external returns (uint256);
-}
 
 contract LPTokenWrapper {
     using SafeMath for uint256;
@@ -92,7 +89,7 @@ contract LPTokenWrapper {
     }
 }
 
-contract VAMPWETHPOOL is LPTokenWrapper, IRewardDistributionRecipient {
+contract VMANASUMMONERPOOL is LPTokenWrapper, IRewardDistributionRecipient {
     IERC20 public mana = IERC20(0x4De8f3F90b1bFBE535a979B94f0eE94132d7072D);
     uint256 public DURATION = 7 days;
     uint256 public initreward = 100000000 ether;

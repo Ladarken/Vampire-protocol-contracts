@@ -1,4 +1,4 @@
-// File: @openzeppelin/contracts/ownership/Ownable.sol
+// File: @openzeppelin/contracts/ownership/OwnableExtended.sol
 
 pragma solidity ^0.5.0;
 
