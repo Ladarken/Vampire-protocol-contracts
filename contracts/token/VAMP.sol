@@ -95,40 +95,6 @@ contract VAMPToken is VAMPTokenInterface {
         return _totalSupply;
     }
 
-    function mint(address account, uint256 amount) public onlyOwner returns (bool)
-    {
-        require(amount > 0);
-        _mint(account, amount);
-        return true;
-    }
-
-    function burn(uint256 amount) public onlyOwner returns (bool)
-    {
-        _burn(msg.sender, amount);
-        return true;
-    }
-
-    function _mint(address account, uint256 amount) internal
-    {
-        require(account != address(0), "ERC20: mint to the zero address");
-        // uint256 merValue = amount.mul(_gonsPerFragment);
-        _totalSupply = _totalSupply.add(amount);
-        _gonBalances[account] = _gonBalances[account].add(amount);
-        emit Transfer(address(0), account, amount);
-//        emit Transfer(address(0x0), account, TOTAL_GONS);
-//        emit Transfer(address(0x0), account, _gonsPerFragment);
-//        emit Transfer(address(0x0), account, INITIAL_FRAGMENTS_SUPPLY);
-    }
-
-    function _burn(address account, uint256 value) internal
-    {
-        require(account != address(0));
-        // uint256 merValue = value.mul(_gonsPerFragment);
-        _totalSupply = _totalSupply.sub(value);
-        _gonBalances[account] = _gonBalances[account].sub(value);
-        emit Transfer(account, address(0), value);
-    }
-
     /**
      * @return The total number of fragments.
      */
@@ -143,7 +109,7 @@ contract VAMPToken is VAMPTokenInterface {
      */
     function balanceOf(address who) public view returns (uint256)
     {
-        return _gonBalances[who];//.div(_gonsPerFragment);
+        return _gonBalances[who].div(_gonsPerFragment);
     }
 
     /**
@@ -331,7 +297,7 @@ contract VAMP is VAMPToken {
     constructor() public {
 
         OwnableExtended.initialize(msg.sender);
-        ERC20Detailed.initialize("VAMP", "VAMP", uint8(DECIMALS));
+        ERC20Detailed.initialize("Vampire Protocol", "VAMP", uint8(DECIMALS));
 
         _totalSupply = INITIAL_FRAGMENTS_SUPPLY;
         _gonBalances[msg.sender] = TOTAL_GONS;

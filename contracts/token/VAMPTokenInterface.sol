@@ -24,13 +24,6 @@ contract VAMPTokenInterface is VAMPTokenStorage {
 
     function rebase(int256 supplyDelta) external returns (uint256);
 
-    function mint(address account, uint256 amount) public returns (bool);
-
-    function burn(uint256 amount) public returns (bool);
-
-    // function _mint(address account, uint256 amount) internal;
-    // function _burn(address account, uint256 value) internal;
-
     function totalSupply() public view returns (uint256);
 
     function balanceOf(address who) public view returns (uint256);
@@ -54,7 +47,5 @@ contract VAMPTokenInterface is VAMPTokenStorage {
     function setTransactionEnabled(uint index, bool enabled) external;
 
     function transactionsSize() external view returns (uint256);
-
-    // function externalCall(address destination, bytes memory data) internal returns (bool);
 
 }

@@ -188,14 +188,14 @@
     "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/token/VAMPTokenStorage.sol",
     "exportedSymbols": {
       "VAMPTokenStorage": [
-        10148
+        10004
       ]
     },
-    "id": 10149,
+    "id": 10005,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 10078,
+        "id": 9934,
         "literals": [
           "solidity",
           "0.5",
@@ -207,9 +207,9 @@
       {
         "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/SafeMath.sol",
         "file": "../lib/SafeMath.sol",
-        "id": 10079,
+        "id": 9935,
         "nodeType": "ImportDirective",
-        "scope": 10149,
+        "scope": 10005,
         "sourceUnit": 5859,
         "src": "25:29:29",
         "symbolAliases": [],
@@ -218,9 +218,9 @@
       {
         "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/SafeMathInt.sol",
         "file": "../lib/SafeMathInt.sol",
-        "id": 10080,
+        "id": 9936,
         "nodeType": "ImportDirective",
-        "scope": 10149,
+        "scope": 10005,
         "sourceUnit": 6049,
         "src": "55:32:29",
         "symbolAliases": [],
@@ -229,9 +229,9 @@
       {
         "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/OwnableExtended.sol",
         "file": "../lib/OwnableExtended.sol",
-        "id": 10081,
+        "id": 9937,
         "nodeType": "ImportDirective",
-        "scope": 10149,
+        "scope": 10005,
         "sourceUnit": 5467,
         "src": "88:36:29",
         "symbolAliases": [],
@@ -243,7 +243,7 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 10082,
+              "id": 9938,
               "name": "OwnableExtended",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 5466,
@@ -253,7 +253,7 @@
                 "typeString": "contract OwnableExtended"
               }
             },
-            "id": 10083,
+            "id": 9939,
             "nodeType": "InheritanceSpecifier",
             "src": "183:15:29"
           }
@@ -266,9 +266,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 10148,
+        "id": 10004,
         "linearizedBaseContracts": [
-          10148,
+          10004,
           5466,
           4510,
           5150
@@ -277,10 +277,10 @@
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "id": 10086,
+            "id": 9942,
             "libraryName": {
               "contractScope": null,
-              "id": 10084,
+              "id": 9940,
               "name": "SafeMath",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 5858,
@@ -293,7 +293,7 @@
             "nodeType": "UsingForDirective",
             "src": "206:27:29",
             "typeName": {
-              "id": 10085,
+              "id": 9941,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "225:7:29",
@@ -304,10 +304,10 @@
             }
           },
           {
-            "id": 10089,
+            "id": 9945,
             "libraryName": {
               "contractScope": null,
-              "id": 10087,
+              "id": 9943,
               "name": "SafeMathInt",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 6048,
@@ -320,7 +320,7 @@
             "nodeType": "UsingForDirective",
             "src": "238:29:29",
             "typeName": {
-              "id": 10088,
+              "id": 9944,
               "name": "int256",
               "nodeType": "ElementaryTypeName",
               "src": "260:6:29",
@@ -332,14 +332,14 @@
           },
           {
             "canonicalName": "VAMPTokenStorage.Transaction",
-            "id": 10096,
+            "id": 9952,
             "members": [
               {
                 "constant": false,
-                "id": 10091,
+                "id": 9947,
                 "name": "enabled",
                 "nodeType": "VariableDeclaration",
-                "scope": 10096,
+                "scope": 9952,
                 "src": "302:12:29",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -348,7 +348,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 10090,
+                  "id": 9946,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "302:4:29",
@@ -362,10 +362,10 @@
               },
               {
                 "constant": false,
-                "id": 10093,
+                "id": 9949,
                 "name": "destination",
                 "nodeType": "VariableDeclaration",
-                "scope": 10096,
+                "scope": 9952,
                 "src": "324:19:29",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -374,7 +374,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 10092,
+                  "id": 9948,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "324:7:29",
@@ -389,10 +389,10 @@
               },
               {
                 "constant": false,
-                "id": 10095,
+                "id": 9951,
                 "name": "data",
                 "nodeType": "VariableDeclaration",
-                "scope": 10096,
+                "scope": 9952,
                 "src": "353:10:29",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -401,7 +401,7 @@
                   "typeString": "bytes"
                 },
                 "typeName": {
-                  "id": 10094,
+                  "id": 9950,
                   "name": "bytes",
                   "nodeType": "ElementaryTypeName",
                   "src": "353:5:29",
@@ -416,42 +416,42 @@
             ],
             "name": "Transaction",
             "nodeType": "StructDefinition",
-            "scope": 10148,
+            "scope": 10004,
             "src": "273:97:29",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 10099,
+            "id": 9955,
             "name": "transactions",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "418:33:29",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_struct$_Transaction_$10096_storage_$dyn_storage",
+              "typeIdentifier": "t_array$_t_struct$_Transaction_$9952_storage_$dyn_storage",
               "typeString": "struct VAMPTokenStorage.Transaction[]"
             },
             "typeName": {
               "baseType": {
                 "contractScope": null,
-                "id": 10097,
+                "id": 9953,
                 "name": "Transaction",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 10096,
+                "referencedDeclaration": 9952,
                 "src": "418:11:29",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Transaction_$10096_storage_ptr",
+                  "typeIdentifier": "t_struct$_Transaction_$9952_storage_ptr",
                   "typeString": "struct VAMPTokenStorage.Transaction"
                 }
               },
-              "id": 10098,
+              "id": 9954,
               "length": null,
               "nodeType": "ArrayTypeName",
               "src": "418:13:29",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_Transaction_$10096_storage_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_struct$_Transaction_$9952_storage_$dyn_storage_ptr",
                 "typeString": "struct VAMPTokenStorage.Transaction[]"
               }
             },
@@ -460,10 +460,10 @@
           },
           {
             "constant": true,
-            "id": 10102,
+            "id": 9958,
             "name": "DECIMALS",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "458:39:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -472,7 +472,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 10100,
+              "id": 9956,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "458:7:29",
@@ -484,7 +484,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3138",
-              "id": 10101,
+              "id": 9957,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -503,10 +503,10 @@
           },
           {
             "constant": true,
-            "id": 10108,
+            "id": 9964,
             "name": "MAX_UINT256",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "503:51:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -515,7 +515,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 10103,
+              "id": 9959,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "503:7:29",
@@ -526,7 +526,7 @@
             },
             "value": {
               "argumentTypes": null,
-              "id": 10107,
+              "id": 9963,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -541,7 +541,7 @@
                   {
                     "argumentTypes": null,
                     "hexValue": "30",
-                    "id": 10105,
+                    "id": 9961,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -564,7 +564,7 @@
                       "typeString": "int_const 0"
                     }
                   ],
-                  "id": 10104,
+                  "id": 9960,
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
@@ -577,7 +577,7 @@
                   },
                   "typeName": "uint256"
                 },
-                "id": 10106,
+                "id": 9962,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
@@ -600,10 +600,10 @@
           },
           {
             "constant": true,
-            "id": 10115,
+            "id": 9971,
             "name": "INITIAL_FRAGMENTS_SUPPLY",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "560:78:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -612,7 +612,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 10109,
+              "id": 9965,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "560:7:29",
@@ -627,7 +627,7 @@
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
               },
-              "id": 10114,
+              "id": 9970,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -635,7 +635,7 @@
               "leftExpression": {
                 "argumentTypes": null,
                 "hexValue": "3133373530303030",
-                "id": 10110,
+                "id": 9966,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
@@ -658,7 +658,7 @@
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 },
-                "id": 10113,
+                "id": 9969,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
@@ -666,7 +666,7 @@
                 "leftExpression": {
                   "argumentTypes": null,
                   "hexValue": "3130",
-                  "id": 10111,
+                  "id": 9967,
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
@@ -685,11 +685,11 @@
                 "operator": "**",
                 "rightExpression": {
                   "argumentTypes": null,
-                  "id": 10112,
+                  "id": 9968,
                   "name": "DECIMALS",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 10102,
+                  "referencedDeclaration": 9958,
                   "src": "630:8:29",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
@@ -712,10 +712,10 @@
           },
           {
             "constant": true,
-            "id": 10123,
+            "id": 9979,
             "name": "TOTAL_GONS",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "818:93:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -724,7 +724,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 10116,
+              "id": 9972,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "818:7:29",
@@ -739,18 +739,18 @@
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
               },
-              "id": 10122,
+              "id": 9978,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "lValueRequested": false,
               "leftExpression": {
                 "argumentTypes": null,
-                "id": 10117,
+                "id": 9973,
                 "name": "MAX_UINT256",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 10108,
+                "referencedDeclaration": 9964,
                 "src": "857:11:29",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
@@ -768,18 +768,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 10120,
+                    "id": 9976,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 10118,
+                      "id": 9974,
                       "name": "MAX_UINT256",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 10108,
+                      "referencedDeclaration": 9964,
                       "src": "872:11:29",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -790,11 +790,11 @@
                     "operator": "%",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 10119,
+                      "id": 9975,
                       "name": "INITIAL_FRAGMENTS_SUPPLY",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 10115,
+                      "referencedDeclaration": 9971,
                       "src": "886:24:29",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -808,7 +808,7 @@
                     }
                   }
                 ],
-                "id": 10121,
+                "id": 9977,
                 "isConstant": false,
                 "isInlineArray": false,
                 "isLValue": false,
@@ -831,10 +831,10 @@
           },
           {
             "constant": true,
-            "id": 10129,
+            "id": 9985,
             "name": "MAX_SUPPLY",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "989:50:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -843,7 +843,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 10124,
+              "id": 9980,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "989:7:29",
@@ -854,7 +854,7 @@
             },
             "value": {
               "argumentTypes": null,
-              "id": 10128,
+              "id": 9984,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -869,7 +869,7 @@
                   {
                     "argumentTypes": null,
                     "hexValue": "30",
-                    "id": 10126,
+                    "id": 9982,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -892,7 +892,7 @@
                       "typeString": "int_const 0"
                     }
                   ],
-                  "id": 10125,
+                  "id": 9981,
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
@@ -905,7 +905,7 @@
                   },
                   "typeName": "uint128"
                 },
-                "id": 10127,
+                "id": 9983,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
@@ -928,10 +928,10 @@
           },
           {
             "constant": false,
-            "id": 10131,
+            "id": 9987,
             "name": "_epoch",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "1062:23:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -940,7 +940,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 10130,
+              "id": 9986,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1062:7:29",
@@ -954,10 +954,10 @@
           },
           {
             "constant": false,
-            "id": 10133,
+            "id": 9989,
             "name": "_totalSupply",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "1092:29:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -966,7 +966,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 10132,
+              "id": 9988,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1092:7:29",
@@ -980,10 +980,10 @@
           },
           {
             "constant": false,
-            "id": 10135,
+            "id": 9991,
             "name": "_gonsPerFragment",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "1127:33:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -992,7 +992,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 10134,
+              "id": 9990,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1127:7:29",
@@ -1006,10 +1006,10 @@
           },
           {
             "constant": false,
-            "id": 10137,
+            "id": 9993,
             "name": "rebaser",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "1166:24:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1018,7 +1018,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 10136,
+              "id": 9992,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "1166:7:29",
@@ -1033,10 +1033,10 @@
           },
           {
             "constant": false,
-            "id": 10141,
+            "id": 9997,
             "name": "_gonBalances",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "1196:49:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1045,9 +1045,9 @@
               "typeString": "mapping(address => uint256)"
             },
             "typeName": {
-              "id": 10140,
+              "id": 9996,
               "keyType": {
-                "id": 10138,
+                "id": 9994,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "1204:7:29",
@@ -1063,7 +1063,7 @@
                 "typeString": "mapping(address => uint256)"
               },
               "valueType": {
-                "id": 10139,
+                "id": 9995,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "1215:7:29",
@@ -1078,10 +1078,10 @@
           },
           {
             "constant": false,
-            "id": 10147,
+            "id": 10003,
             "name": "_allowedFragments",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "1375:74:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1090,9 +1090,9 @@
               "typeString": "mapping(address => mapping(address => uint256))"
             },
             "typeName": {
-              "id": 10146,
+              "id": 10002,
               "keyType": {
-                "id": 10142,
+                "id": 9998,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "1383:7:29",
@@ -1108,9 +1108,9 @@
                 "typeString": "mapping(address => mapping(address => uint256))"
               },
               "valueType": {
-                "id": 10145,
+                "id": 10001,
                 "keyType": {
-                  "id": 10143,
+                  "id": 9999,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "1402:7:29",
@@ -1126,7 +1126,7 @@
                   "typeString": "mapping(address => uint256)"
                 },
                 "valueType": {
-                  "id": 10144,
+                  "id": 10000,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1413:7:29",
@@ -1141,7 +1141,7 @@
             "visibility": "internal"
           }
         ],
-        "scope": 10149,
+        "scope": 10005,
         "src": "154:1299:29"
       }
     ],
@@ -1151,14 +1151,14 @@
     "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/token/VAMPTokenStorage.sol",
     "exportedSymbols": {
       "VAMPTokenStorage": [
-        10148
+        10004
       ]
     },
-    "id": 10149,
+    "id": 10005,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 10078,
+        "id": 9934,
         "literals": [
           "solidity",
           "0.5",
@@ -1170,9 +1170,9 @@
       {
         "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/SafeMath.sol",
         "file": "../lib/SafeMath.sol",
-        "id": 10079,
+        "id": 9935,
         "nodeType": "ImportDirective",
-        "scope": 10149,
+        "scope": 10005,
         "sourceUnit": 5859,
         "src": "25:29:29",
         "symbolAliases": [],
@@ -1181,9 +1181,9 @@
       {
         "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/SafeMathInt.sol",
         "file": "../lib/SafeMathInt.sol",
-        "id": 10080,
+        "id": 9936,
         "nodeType": "ImportDirective",
-        "scope": 10149,
+        "scope": 10005,
         "sourceUnit": 6049,
         "src": "55:32:29",
         "symbolAliases": [],
@@ -1192,9 +1192,9 @@
       {
         "absolutePath": "/Users/admin/dev/vamp/Vampire-protocol-contracts/contracts/lib/OwnableExtended.sol",
         "file": "../lib/OwnableExtended.sol",
-        "id": 10081,
+        "id": 9937,
         "nodeType": "ImportDirective",
-        "scope": 10149,
+        "scope": 10005,
         "sourceUnit": 5467,
         "src": "88:36:29",
         "symbolAliases": [],
@@ -1206,7 +1206,7 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 10082,
+              "id": 9938,
               "name": "OwnableExtended",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 5466,
@@ -1216,7 +1216,7 @@
                 "typeString": "contract OwnableExtended"
               }
             },
-            "id": 10083,
+            "id": 9939,
             "nodeType": "InheritanceSpecifier",
             "src": "183:15:29"
           }
@@ -1229,9 +1229,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 10148,
+        "id": 10004,
         "linearizedBaseContracts": [
-          10148,
+          10004,
           5466,
           4510,
           5150
@@ -1240,10 +1240,10 @@
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "id": 10086,
+            "id": 9942,
             "libraryName": {
               "contractScope": null,
-              "id": 10084,
+              "id": 9940,
               "name": "SafeMath",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 5858,
@@ -1256,7 +1256,7 @@
             "nodeType": "UsingForDirective",
             "src": "206:27:29",
             "typeName": {
-              "id": 10085,
+              "id": 9941,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "225:7:29",
@@ -1267,10 +1267,10 @@
             }
           },
           {
-            "id": 10089,
+            "id": 9945,
             "libraryName": {
               "contractScope": null,
-              "id": 10087,
+              "id": 9943,
               "name": "SafeMathInt",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 6048,
@@ -1283,7 +1283,7 @@
             "nodeType": "UsingForDirective",
             "src": "238:29:29",
             "typeName": {
-              "id": 10088,
+              "id": 9944,
               "name": "int256",
               "nodeType": "ElementaryTypeName",
               "src": "260:6:29",
@@ -1295,14 +1295,14 @@
           },
           {
             "canonicalName": "VAMPTokenStorage.Transaction",
-            "id": 10096,
+            "id": 9952,
             "members": [
               {
                 "constant": false,
-                "id": 10091,
+                "id": 9947,
                 "name": "enabled",
                 "nodeType": "VariableDeclaration",
-                "scope": 10096,
+                "scope": 9952,
                 "src": "302:12:29",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1311,7 +1311,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 10090,
+                  "id": 9946,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "302:4:29",
@@ -1325,10 +1325,10 @@
               },
               {
                 "constant": false,
-                "id": 10093,
+                "id": 9949,
                 "name": "destination",
                 "nodeType": "VariableDeclaration",
-                "scope": 10096,
+                "scope": 9952,
                 "src": "324:19:29",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1337,7 +1337,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 10092,
+                  "id": 9948,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "324:7:29",
@@ -1352,10 +1352,10 @@
               },
               {
                 "constant": false,
-                "id": 10095,
+                "id": 9951,
                 "name": "data",
                 "nodeType": "VariableDeclaration",
-                "scope": 10096,
+                "scope": 9952,
                 "src": "353:10:29",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1364,7 +1364,7 @@
                   "typeString": "bytes"
                 },
                 "typeName": {
-                  "id": 10094,
+                  "id": 9950,
                   "name": "bytes",
                   "nodeType": "ElementaryTypeName",
                   "src": "353:5:29",
@@ -1379,42 +1379,42 @@
             ],
             "name": "Transaction",
             "nodeType": "StructDefinition",
-            "scope": 10148,
+            "scope": 10004,
             "src": "273:97:29",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 10099,
+            "id": 9955,
             "name": "transactions",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "418:33:29",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_struct$_Transaction_$10096_storage_$dyn_storage",
+              "typeIdentifier": "t_array$_t_struct$_Transaction_$9952_storage_$dyn_storage",
               "typeString": "struct VAMPTokenStorage.Transaction[]"
             },
             "typeName": {
               "baseType": {
                 "contractScope": null,
-                "id": 10097,
+                "id": 9953,
                 "name": "Transaction",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 10096,
+                "referencedDeclaration": 9952,
                 "src": "418:11:29",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Transaction_$10096_storage_ptr",
+                  "typeIdentifier": "t_struct$_Transaction_$9952_storage_ptr",
                   "typeString": "struct VAMPTokenStorage.Transaction"
                 }
               },
-              "id": 10098,
+              "id": 9954,
               "length": null,
               "nodeType": "ArrayTypeName",
               "src": "418:13:29",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_Transaction_$10096_storage_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_struct$_Transaction_$9952_storage_$dyn_storage_ptr",
                 "typeString": "struct VAMPTokenStorage.Transaction[]"
               }
             },
@@ -1423,10 +1423,10 @@
           },
           {
             "constant": true,
-            "id": 10102,
+            "id": 9958,
             "name": "DECIMALS",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "458:39:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1435,7 +1435,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 10100,
+              "id": 9956,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "458:7:29",
@@ -1447,7 +1447,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "3138",
-              "id": 10101,
+              "id": 9957,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -1466,10 +1466,10 @@
           },
           {
             "constant": true,
-            "id": 10108,
+            "id": 9964,
             "name": "MAX_UINT256",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "503:51:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1478,7 +1478,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 10103,
+              "id": 9959,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "503:7:29",
@@ -1489,7 +1489,7 @@
             },
             "value": {
               "argumentTypes": null,
-              "id": 10107,
+              "id": 9963,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -1504,7 +1504,7 @@
                   {
                     "argumentTypes": null,
                     "hexValue": "30",
-                    "id": 10105,
+                    "id": 9961,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -1527,7 +1527,7 @@
                       "typeString": "int_const 0"
                     }
                   ],
-                  "id": 10104,
+                  "id": 9960,
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
@@ -1540,7 +1540,7 @@
                   },
                   "typeName": "uint256"
                 },
-                "id": 10106,
+                "id": 9962,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
@@ -1563,10 +1563,10 @@
           },
           {
             "constant": true,
-            "id": 10115,
+            "id": 9971,
             "name": "INITIAL_FRAGMENTS_SUPPLY",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "560:78:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1575,7 +1575,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 10109,
+              "id": 9965,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "560:7:29",
@@ -1590,7 +1590,7 @@
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
               },
-              "id": 10114,
+              "id": 9970,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -1598,7 +1598,7 @@
               "leftExpression": {
                 "argumentTypes": null,
                 "hexValue": "3133373530303030",
-                "id": 10110,
+                "id": 9966,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
@@ -1621,7 +1621,7 @@
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 },
-                "id": 10113,
+                "id": 9969,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
@@ -1629,7 +1629,7 @@
                 "leftExpression": {
                   "argumentTypes": null,
                   "hexValue": "3130",
-                  "id": 10111,
+                  "id": 9967,
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
@@ -1648,11 +1648,11 @@
                 "operator": "**",
                 "rightExpression": {
                   "argumentTypes": null,
-                  "id": 10112,
+                  "id": 9968,
                   "name": "DECIMALS",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 10102,
+                  "referencedDeclaration": 9958,
                   "src": "630:8:29",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
@@ -1675,10 +1675,10 @@
           },
           {
             "constant": true,
-            "id": 10123,
+            "id": 9979,
             "name": "TOTAL_GONS",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "818:93:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1687,7 +1687,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 10116,
+              "id": 9972,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "818:7:29",
@@ -1702,18 +1702,18 @@
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
               },
-              "id": 10122,
+              "id": 9978,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "lValueRequested": false,
               "leftExpression": {
                 "argumentTypes": null,
-                "id": 10117,
+                "id": 9973,
                 "name": "MAX_UINT256",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 10108,
+                "referencedDeclaration": 9964,
                 "src": "857:11:29",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
@@ -1731,18 +1731,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 10120,
+                    "id": 9976,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 10118,
+                      "id": 9974,
                       "name": "MAX_UINT256",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 10108,
+                      "referencedDeclaration": 9964,
                       "src": "872:11:29",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1753,11 +1753,11 @@
                     "operator": "%",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 10119,
+                      "id": 9975,
                       "name": "INITIAL_FRAGMENTS_SUPPLY",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 10115,
+                      "referencedDeclaration": 9971,
                       "src": "886:24:29",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1771,7 +1771,7 @@
                     }
                   }
                 ],
-                "id": 10121,
+                "id": 9977,
                 "isConstant": false,
                 "isInlineArray": false,
                 "isLValue": false,
@@ -1794,10 +1794,10 @@
           },
           {
             "constant": true,
-            "id": 10129,
+            "id": 9985,
             "name": "MAX_SUPPLY",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "989:50:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1806,7 +1806,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 10124,
+              "id": 9980,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "989:7:29",
@@ -1817,7 +1817,7 @@
             },
             "value": {
               "argumentTypes": null,
-              "id": 10128,
+              "id": 9984,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -1832,7 +1832,7 @@
                   {
                     "argumentTypes": null,
                     "hexValue": "30",
-                    "id": 10126,
+                    "id": 9982,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -1855,7 +1855,7 @@
                       "typeString": "int_const 0"
                     }
                   ],
-                  "id": 10125,
+                  "id": 9981,
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
@@ -1868,7 +1868,7 @@
                   },
                   "typeName": "uint128"
                 },
-                "id": 10127,
+                "id": 9983,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
@@ -1891,10 +1891,10 @@
           },
           {
             "constant": false,
-            "id": 10131,
+            "id": 9987,
             "name": "_epoch",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "1062:23:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1903,7 +1903,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 10130,
+              "id": 9986,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1062:7:29",
@@ -1917,10 +1917,10 @@
           },
           {
             "constant": false,
-            "id": 10133,
+            "id": 9989,
             "name": "_totalSupply",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "1092:29:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1929,7 +1929,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 10132,
+              "id": 9988,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1092:7:29",
@@ -1943,10 +1943,10 @@
           },
           {
             "constant": false,
-            "id": 10135,
+            "id": 9991,
             "name": "_gonsPerFragment",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "1127:33:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1955,7 +1955,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 10134,
+              "id": 9990,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1127:7:29",
@@ -1969,10 +1969,10 @@
           },
           {
             "constant": false,
-            "id": 10137,
+            "id": 9993,
             "name": "rebaser",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "1166:24:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1981,7 +1981,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 10136,
+              "id": 9992,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "1166:7:29",
@@ -1996,10 +1996,10 @@
           },
           {
             "constant": false,
-            "id": 10141,
+            "id": 9997,
             "name": "_gonBalances",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "1196:49:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2008,9 +2008,9 @@
               "typeString": "mapping(address => uint256)"
             },
             "typeName": {
-              "id": 10140,
+              "id": 9996,
               "keyType": {
-                "id": 10138,
+                "id": 9994,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "1204:7:29",
@@ -2026,7 +2026,7 @@
                 "typeString": "mapping(address => uint256)"
               },
               "valueType": {
-                "id": 10139,
+                "id": 9995,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "1215:7:29",
@@ -2041,10 +2041,10 @@
           },
           {
             "constant": false,
-            "id": 10147,
+            "id": 10003,
             "name": "_allowedFragments",
             "nodeType": "VariableDeclaration",
-            "scope": 10148,
+            "scope": 10004,
             "src": "1375:74:29",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2053,9 +2053,9 @@
               "typeString": "mapping(address => mapping(address => uint256))"
             },
             "typeName": {
-              "id": 10146,
+              "id": 10002,
               "keyType": {
-                "id": 10142,
+                "id": 9998,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "1383:7:29",
@@ -2071,9 +2071,9 @@
                 "typeString": "mapping(address => mapping(address => uint256))"
               },
               "valueType": {
-                "id": 10145,
+                "id": 10001,
                 "keyType": {
-                  "id": 10143,
+                  "id": 9999,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "1402:7:29",
@@ -2089,7 +2089,7 @@
                   "typeString": "mapping(address => uint256)"
                 },
                 "valueType": {
-                  "id": 10144,
+                  "id": 10000,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "1413:7:29",
@@ -2104,7 +2104,7 @@
             "visibility": "internal"
           }
         ],
-        "scope": 10149,
+        "scope": 10005,
         "src": "154:1299:29"
       }
     ],
@@ -2116,7 +2116,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-10-10T01:31:50.074Z",
+  "updatedAt": "2020-10-10T04:06:29.146Z",
   "devdoc": {
     "methods": {}
   },

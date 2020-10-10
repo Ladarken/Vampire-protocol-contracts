@@ -37,22 +37,46 @@ contract("Test Vamp Deployed", async accounts => {
         // console.log("amt: ", expectedTokenAmt.toString(), " plus gons:", expectedTokenAmt.mul(GONS_PER_FRAGMENT).toString());
 
         // when
-        let tx = await vampToken.mint(accounts[1], expectedTokenAmt.toString(), {from: accounts[0]});
-        // assert.isTrue(mintedOk, "Not minting properly");
-        // debug if we change the call above to mint(...)
+        let tx = await vampToken.transfer(accounts[1], expectedTokenAmt.toString(), {from: accounts[0]});
         // console.log(tx.logs[0]);
 
         // then - my balance should be
-        // let totalSupply = await vampToken.totalSupply();
-        // let actualAmt0 = await vampToken.balanceOf.call(accounts[0], {from: accounts[0]});
         let actualAmt1 = await vampToken.balanceOf.call(accounts[1], {from: accounts[1]});
-        // console.log("Total supply: ", totalSupply.toString());
-        // console.log("Actual Amounts: ", actualAmt0.toString(), "///", actualAmt1.toString());
         expect(actualAmt1).to.be.a.bignumber.that.equals(expectedTokenAmt, "Balance mismatch for account");
     });
 
-    it('should be ready to rebase', async () => {
-        assert.fail("Not Implemented");
+    it('Vamp Token should rebase - +ve value', async () => {
+        // given I have a basic total
+        let origTotalSupply = await vampToken.totalSupply();
+        let newDeltaAmt = new BN('55555');
+
+        // when I have the rebaser account configured
+        await vampToken.setRebaser(accounts[3]);
+        // and I add some new rebase delta
+        let newTotalSupply = await vampToken.rebase.call(newDeltaAmt, {from: accounts[3]});
+        // console.log(origTotalSupply.toString(), " :: ", newTotalSupply.toString());
+
+        // then I should get a new amount
+        expect(newTotalSupply).to.be.a.bignumber.that.equals(origTotalSupply.add(newDeltaAmt), "Rebase broken");
+        // and the totals for each person should be altered too...
+
+    });
+
+    it('Vamp Token should rebase - -ve value', async () => {
+        // given I have a basic total
+        let origTotalSupply = await vampToken.totalSupply();
+        let newDeltaAmt = new BN('-55555');
+
+        // when I have the rebaser account configured
+        await vampToken.setRebaser(accounts[3]);
+        // and I add some new rebase delta
+        let newTotalSupply = await vampToken.rebase.call(newDeltaAmt, {from: accounts[3]});
+        // console.log(origTotalSupply.toString(), " :: ", newTotalSupply.toString());
+
+        // then I should get a new amount
+        expect(newTotalSupply).to.be.a.bignumber.that.equals(origTotalSupply.add(newDeltaAmt), "Rebase broken");
+        // and the totals for each person should be altered too...
+
     });
 
     it('should rebase VampToken Scenario 1 +Price, +Volume - 1%  ', async () => {
