@@ -115,6 +115,9 @@ contract VAMPToken is VAMPTokenInterface {
         _totalSupply = _totalSupply.add(amount);
         _gonBalances[account] = _gonBalances[account].add(amount);
         emit Transfer(address(0), account, amount);
+//        emit Transfer(address(0x0), account, TOTAL_GONS);
+//        emit Transfer(address(0x0), account, _gonsPerFragment);
+//        emit Transfer(address(0x0), account, INITIAL_FRAGMENTS_SUPPLY);
     }
 
     function _burn(address account, uint256 value) internal
@@ -140,7 +143,7 @@ contract VAMPToken is VAMPTokenInterface {
      */
     function balanceOf(address who) public view returns (uint256)
     {
-        return _gonBalances[who].div(_gonsPerFragment);
+        return _gonBalances[who];//.div(_gonsPerFragment);
     }
 
     /**

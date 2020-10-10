@@ -34,7 +34,7 @@ async function deployRs(deployer, network) {
 
     let rebase = new web3.eth.Contract(VAMPRebaser.abi, VAMPRebaser.address);
     let pair = await rebase.methods.uniswap_pair().call();
-    console.log(pair)
+    console.log("Uniswap Pair: ", pair)
     // set rebaser address
     let VAMPToken = await VAMP.deployed();
     await VAMPToken.setRebaser(VAMPRebaser.address);

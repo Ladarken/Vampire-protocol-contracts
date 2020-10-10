@@ -390,9 +390,8 @@ contract VAMPRebaser {
             mintAmount = currSupply.mul(mintPerc).div(BASE);
         }
 
-        // Perform rebase. - this is fucked due to the fat file we have for Vamp tokends
+        // Perform rebase. - this is fucked due to the fat file we have for Vamp tokens
         //Vamp.rebase(epoch, indexDelta, positive);
-        //        assert(VAMP.scalingFactor() <= VAMP.maxScalingFactor());
 
         // Perform actions after rebase.
         // afterRebase(mintAmount, offPegPerc);

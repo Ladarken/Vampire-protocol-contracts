@@ -16,7 +16,8 @@
     "ethereumjs-util": "^7.0.4",
     "ethers": "4.0.38",
     "jest": "24.9.0",
-    "web3": "^1.0.0-beta.37"
+    "web3": "^1.0.0-beta.37",
+    "bn.js": "5.1.3"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.4",
@@ -28,7 +29,9 @@
     "ganache-cli": "^6.10.1",
     "node-fetch": "^2.6.0",
     "scrypt-js": "^2.0.4",
-    "truffle": "^5.1.44"
+    "truffle": "^5.1.44",
+    "chai": "4.2.0",
+    "chai-bn": "0.2.1"
   },
   "scripts": {
     "test": "truffle test"
