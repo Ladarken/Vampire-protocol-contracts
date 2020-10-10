@@ -79,7 +79,19 @@ contract("Test Vamp Deployed", async accounts => {
 
     });
 
-    it('should rebase VampToken Scenario 1 +Price, +Volume - 1%  ', async () => {
+    it('should rebase VampToken Scenario 1 +Price, +Volume - 1% 0.01  ', async () => {
+        assert.fail("Not Implemented");
+    });
+
+    it('should rebase VampToken Scenario 2 +Price, -Volume - 0.5% 0.005  ', async () => {
+        assert.fail("Not Implemented");
+    });
+
+    it('should rebase VampToken Scenario 3 -Price, +Volume - 0.25% 0.0025  ', async () => {
+        assert.fail("Not Implemented");
+    });
+
+    it('should rebase VampToken Scenario 4 -Price, -Volume - -1% -0.01  ', async () => {
         assert.fail("Not Implemented");
     });
 
